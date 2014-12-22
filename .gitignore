@@ -1,0 +1,5 @@
+# These are the files that we will need to version,
+# Other files must be ignored.
+*
+!.gitignore
+!UHG_*.user
