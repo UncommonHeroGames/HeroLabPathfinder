@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <document signature="Hero Lab Data">
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Eberron Spells
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <thing id="spMgcrft1" name="Magecraft" description="You get a +5 competence bonus on one Craft check representing a day of work crafting an item.  If you cast this  spell every day for a week, you can make a Craft check representing the week&#146;s work and still gain the +5 competence bonus.\nFocus: The tools and other equipment normally required to use the Craft skill to which you apply the bonus." compset="Spell" summary="Subject gains +5 on next Craft check.">
     <fieldval field="sFocusDesc" value="a tool"/>
@@ -130,9 +130,9 @@
     <tag group="sResist" tag="Yes"/>
     </thing>
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Eberron Armor Properties
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <thing id="ipMindarmr" name="Mindarmor" description="{i}Constructed of seamless and tightly-bound layers, this item steadies your thoughts when worn.{/i}\n\nWhen activated, a suit of armor or shield that has this property grants you a +5 bonus on Will save to resist mind-affecting spells and abilities until the start of your next turn.\n\nThe mindarmor property functions three times per day.\n\n{b}Construction{/b}\n{b}Requirements{/b}: Craft Magic Arms and Armor, {i}heroism{/i} or {i}empty mind (EPH 99){/i}; {b}Cost{/b} 1,500gp" compset="ItemPower" summary="Gain +5 bonus to Will against mind-affecting, 3/day" uniqueness="useronce">
     <fieldval field="iCL" value="5"/>
@@ -171,9 +171,9 @@ container.parent.field[arArcFail].value = maximum( container.parent.field[arArcF
 container.parent.field[arArcFail].value = maximum( container.parent.field[arArcFail].value - 5, 0 )</eval>
     </thing>
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Eberron Items
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <thing id="ioPhtLib" name="Necklace of the Phantom Library" description="A necklace of the phantom library is a necklace made of golden chain with five lozenge-shaped Siberys dragonshards set among the links at equal intervals.  It is primarily a storage device - the ancient giants&apos; equivalent to a present-day wizard&apos;s spellbook.  A necklace holds 500 pages worth of spells, and you can purge the necklace of unwanted spells witha  moment&apos;s thought.  You can inscribe new spells into a necklace of the phantom library by wearing the necklace, then tracing the necessary sigils in the air before you.  You can thus copy spells without paying the material cost, and the process takes only 20 minutes per spell level.  Cantrips (0 level spells) take 10 minutes to record.\n\nOnce you don the necklace, yellow-orange sigils appear in the air about two feet from your face.  These sigils are the spells inscribed within the necklace, and you can move from spell to spell with a thought, the sigils spinning through your field of vision (an effect that looks a little like a scrolling microfiche reader).  They obscure the rest of your vision, granting total concealment to anyone who isn&apos;t adjacent to you.  Anyone else can see you just fine, however, making it a good idea to take the necklace off prior to combat.\n\nIt takes a standard action to put a necklace on or take it off.  Moving from spell to spell is a free action.  As a practical matter, you&apos;ll wear the necklace only when you&apos;re preparing your spells, so the exact timing of your actions doesn&apos;t matter.\n\n{b}Construction Requirements:{/b} \nUnknown" compset="Wondrous" summary="Necklace stores magically-displayed library of spells" holdable="no">
     <fieldval field="gCost" value="1500"/>
@@ -189,9 +189,9 @@ container.parent.field[arArcFail].value = maximum( container.parent.field[arArcF
     <tag group="gType" tag="Wonder" name="Wondrous Item" abbrev="Wonder"/>
     </thing>
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Unsorted (New entries created by the editor will go after this line)
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <thing id="wMachGun" name="Machine Gun" description="Machine Gun\nDamage: 2d8\nCritical: x4\nRange Increment: 120 ft (touch range 600, max range 1200)\nMisfire: 1-2 (gains broken condition, but does not explode on subsequent misfires)\nCapacity: 250\nWeight: 140 lbs (does not count toward carrying capacity when mounted)\nType: B and P\nSpecial: Automatic\n \nThis heavy advanced two-handed firearm uses ammunition in 250-round belts. A belt is considered an ammunition container for the purposes of reloading a firearm and requires a swift action to load an advanced firearm to its capacity. Although a single person can fire a machine gun, it typically has a two-person crew: the gunner, and a loader who assists with feeding the ammunition belt into the weapon. As a full-round action, the loader can use a special aid another action to grant the gunner a +2 bonus on his next attack roll. Because of its size and heavy weight, a machine gun is often either mounted on a wheeled chassis with a gun shield for trench defensive use, or on the back of a horse-drawn Wagon. Assuming a user can even lift the weapon, firing a machine gun that is not mounted imparts a &#150;4 penalty on attack rolls and the recoil knocks the wielder prone. A machine gun is automatic-fire only. The armored shield provides cover when firing the weapon from the prone position.\n \nAutomatic Weapon Quality: A weapon with the automatic weapon quality fires a burst of bullets with a single pull of the trigger, attacking all creatures in a line. This line starts from any corner of your space and extends to the limit of the weapon&#146;s range or until it strikes a barrier it cannot penetrate. When an automatic weapon attacks all creatures in a line, it makes a separate attack roll against each creature in the line. Each creature in the line can only be attacked with one bullet from each burst. Each attack roll takes a &#150;2 penalty to account for recoil, and its attack damage cannot be modified by precision damage or damage-increasing feats such as Vital Strike. Effects that grant concealment, such as fog or smoke, or the blur, invisibility, or mirror image spells, do not foil an automatic weapon&#146;s line attack. If any of the attack rolls threaten a critical hit, confirm the critical for that attack roll alone. An automatic weapon misfires only if all of the attack rolls made misfire. A single attack with an automatic weapon fires 10 bullets. An automatic weapon cannot fire single bullets that target one creature. When taking a full-attack action with an automatic weapon, you can fire as many bursts in a round as you have attacks.\n \n\nSo basically what this means is that yalls can wheel this thing around just like a double hackbut, except it doesn&#146;t take any time to set it up to fire. It&#146;s a two-handed weapon and doesn&#146;t have its own space. Anyone proficient in firearms can use this. Actually, anyone at all can, but you take a -4 to attack rolls, and misfire on a roll of 1 to 4, so it&#146;s a good idea to be proficient.  A machine gun belt falls under the category of ammunition container. That means you can cast abundant ammunition onto it, as well as any other spell that enhances projectiles, such as align weapon or magic weapon." compset="Weapon">
     <fieldval field="gSizeCost" value="15000"/>

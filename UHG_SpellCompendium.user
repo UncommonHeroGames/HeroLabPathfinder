@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document signature="Hero Lab Data">
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: A
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: B
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: C
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: D
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <thing id="spDimDorGr" name="Dimension Door, Greater" description="{i}Your flesh gives an involuntary shudder as you will yourself elsewhere.  You vanish, reappearing some distance away.{/i}\n\nThis spell functions like dimension door (PH 221), except as noted and that you can transfer the targets once per round, up to a distance of 25 feet + 5 feet per two levels, as a move action that does not provoke attacks of opportunity.\n\n{b}Source:{/b} Spell Compendium, pg 64" compset="Spell" summary="Teleports you 25+5ft/2Lv, for 1 rd/2 Lv">
     <fieldval field="sTarget" value="You and touched objects or other touched willing creatures"/>
@@ -58,9 +58,9 @@
     <tag group="sSchool" tag="Transmutat" name="Transmutation" abbrev="Trans"/>
     </thing>
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: E
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <thing id="spErthbind" name="Earthbind" description="{i}Your foe will reach you in seconds.  You cast this spell, and yellow strips of magical energy loop about its wings, hampering its flight and dragging it to the ground.{/i}\n\nYou hinder the subject creature&apos;s ability to fly (whether through natural or magical means) for the duration of the spell.  If the target fails its saving throw, its fly speed (if any) becomes 0 feet.  An airborne creature subjected to thsi spell falls to the ground as if under the effect of a feather fall spell.  Even if a new effect would grant the creature the ability to fly, that effect is suppressed for the duration of the earthbind spell.\n\nEarthbind has no effect on other forms of movement, or even on effects that might grant airborne movement without granting a fly speed (such as jumping or levitate or air walk spells).\n\n{b}Source:{/b} Spell Compendium, pg 76" compset="Spell" summary="Binds a flying creature to earth">
     <comment>This spell has no classes</comment>
@@ -130,9 +130,9 @@
     <tag group="sLevel" tag="7"/>
     </thing>
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: F
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <thing id="spFlsGrv" name="False Gravity" description="The subject of this spell can travel on any solid surface as though that surface possessed its own gravity.  For example, the subject could walk or even run up a wall as though the wall were a perfectly level floor.  The subject can switch &quot;down&quot; as often as it likes during the spell&apos;s direction, though only once per round, as a free action.  Unattended objects fall, as normal.\n\nThe subject of {i}false gravity{/i} can fly by choosing a solid surface and letting itself fall through the air toward it.  A character &quot;flying&quot; in this fashion moves at 30 feet per round and can make one turn, in any direction, once per round, by redefining its personal gravity.  A creature falling in this fashion loses all &quot;downward&quot; momentum when it changes gravity.\n\n{b}Source:{/b} Spell Compendium, pg 87" compset="Spell" summary="Grants ability to walk on walls and ceilings.">
     <fieldval field="sCompDesc" value="a pair of magnets"/>
@@ -209,9 +209,9 @@
     <tag group="sDuration" tag="Day"/>
     </thing>
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: G
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <thing id="spGemjump" name="Gemjump" description="{i}You mutter over the iridescent, faceted gem.  It twinkles in response, and you feel a strong link between you and the stone.  When you speak the word, the two of you will be reunited.{/i}\n\nThis spell teleports you to the location of a specially prepared gem.  You initially cast gemjump upon the focus, which you must touch.  As a standard action any time after you prepare the stone, you can utter a command word and instantly teleport you to the location of the gem, provided you and the stone are on the same plane.\n\nThe teleport is always on target (as though you are using greater teleport).  If the area containing the gem is too small for you, you appear in the nearest sufficiently large space.\n\nYou can transport, in addition to yourself, one medium or smaller creature per three caster levels, and can bring along objects as long as their weight does not exceed your maximum load.\n\nAn unwilling creature can&apos;t be teleported by gemjump.  Likewise, a creature&apos;s Will save (or spell resistance) prevents items in its possession from being teleported.  Unattended, nonmagical objects receive no saving throw.\n\nFocus: A gem worth 500gp\n\n{b}Source:{/b} Spell Compendium, pg 101" compset="Spell" summary="Teleports you to a prepared focus gem">
     <fieldval field="sTarget" value="You and willing creatures totaling up to one/3 levels; see text"/>
@@ -244,14 +244,14 @@
     <tag group="sResist" tag="SeeText"/>
     </thing>
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: H
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: I
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <thing id="spIndomi" name="Indomitability" description="The spell&apos;s energy makes you feel impervious to wounds, if only for limited time.\n\nThe Indomitability spell protects its recipient from the first incapacitating attack the creature suffers during the spell&apos;s duration.  An incpacitating attack is one that would reduce the recipient to fewer than one hit point.  The attack must be one that deals damage; the Indomitability spell offers no protection from nodamaging effects or attacks that kill or destroy without dealing any damage, such as death effects.  Regardless of how much damage the attack deals, the recipient of the Indomitability spell takes only enough damage to be reduced to 1 hp.  The remaining damage from the attack is ignored.  Once the spell protects the subject in this manner, the spell is discharged.\n\nSource: Spell Compendium, p122" compset="Spell" summary="Protects against hp damage that would cause death">
     <fieldval field="sFocusDesc" value="a piece of cured leather"/>
@@ -277,24 +277,24 @@
     <tag group="sDuration" tag="PerLevel" name="Level-based" abbrev="Level-based"/>
     </thing>
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: J
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: K
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: L
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: M
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <thing id="spMagHndGr" name="Mage Hand, Greater" description="{i}You cast the spell, and your hand is suffused with a ghostly white radiance. You point your finger at the target across the room, and it slowly rises in the air.{/i}\n\nA greater mage hand spell can lift an object and move it at will from a distance. As a move action, you can propel the target up to 20 feet in any direction, although the spell ends if the distance between you and the subject ever exceeds the spell&apos;s range.\n\nA creature can negate the effect against an object it possesses with a successful Will save or if you fail to overcome its spell resistance.\n\nAn object can be telekinetically manipulated as if with one hand. For example, a lever or rope can be pulled, a key can be turned, an object rotated and so on, if the force required is within the weight limitation. The spell has an effective Strength score of 10.\n\n{b}Source:{/b} Spell Compendium, pg 136" compset="Spell" summary="Force hand lifts up to 40 lb., moves 20 ft. per round">
     <fieldval field="sDuration" value="Concentration"/>
@@ -319,14 +319,14 @@
     <tag group="sResist" tag="Yes"/>
     </thing>
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: N
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: O
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
    <thing id="spOrbFrc" name="Orb of Force" description="As you gather the energies of the spell, you feel against your palm a spherical weight that seems almost bonded to your skin.  The sphere grows, until with a final precise movement, you release the translucent blue orb, sending it hurtling toward your intended target.\n\nYou create a globe of force 3 inches across, which streaks from your palm toward your target.  You must succeed on a ranged touch attack to hit the target.  The orb deals 1d6 points of damage per caster level (maximum 10d6).\n\nSource: Spell Compendium, p151" compset="Spell" summary="Ranged touch attack deals 1d6 force damage per caster level (max 10d6).">
     <fieldval field="sEffect" value="One or more rays"/>
@@ -351,9 +351,9 @@
     <tag group="sComp" tag="V" name="Verbal" abbrev="{ref s_V}V{ref}"/>
     </thing>
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: P
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <thing id="spPhnThief" name="Phantasmal Thief" description="{i}As you invoke this spell, the spool begins to spin, the thread vanishing as it unravels.  There is a wrinkle of force that flashes briefly; then it evaporates, leaving only the promise of power behind.{/i}\n\nAn invisible force, not unlike the product of an unseen servant spell (PH 297) comes into being where you wish.  On your turn, this force steals objects from others as you inaudibly direct (a free action).  A phantasmal thief can steal an object from a creature or pick up an unattended object, as long as the object weighs no more than 1 pound per caster level.  It cannot break into locked chests.  A phantasmal thief has a Stealth modifier (useful against those who can see invisible creatures)  equal to your caster level.\n\nIf a phantasmal thief goes undetected, it can steal any object a creature possesses but is not holding or wearing.  Even objects in a bag of holding can be stolen.  It can steal objects, bring objects to you, or put them back where they came from.  It can take no other actions.  A phantasmal thief needs 1 round to steal an object and another round to bring it to you.\n\nA phantasmal thief can hold only one object at a time, and the object becomes invisible in its grasp.  A thief cannot take an item if it is detected by the creature it&apos;s trying to steal from (with a Perception check).  However, the thief can repeate the attempt in the next round.  It cannot be harmed in any way, though it can be dispelled.\n\nA phantasmal thief can steal an object from a creature&apos;s hand by making a successful disarm attempt.  It does so with a bonus on the disarm check equal to your caster level.  If a phantasmal thief is used in this way, it disappears after it brings the stolen object to you.\n\n{b}Source:{/b} Spell Compendium, pg 155" compset="Spell" summary="Invisible force steals on your behalf">
     <fieldval field="sDuration" value="1 round/level"/>
@@ -405,19 +405,19 @@
     <tag group="sResist" tag="Yes"/>
     </thing>
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: Q
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: R
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: S
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <thing id="spScaWeak" name="Scale Weakening" description="{i}As you cast this spell, the snakeskin vaporizes.  A dull gray ray projects from your hand.  Where the ray strikes, your foe&apos;s skin seems brittle and more frail.{/i}\n\nYou must succeed on a ranged touch attack with the ray to strike a target.  The subjects natural armor bonus is reduced by 1 point per three caster levels (maximum reduction 5 points at 15th level).  This spell can&apos;t reduce a creature&apos;s natural armor bonus to less than 0, nor does it have any effect on an enhancement bonus to natural armor (such as that granted by the {i}barkskin{/i} spell).\n\nSource: Spell Compendium, p180" compset="Spell" summary="Ray weakens natural armor">
     <fieldval field="sEffect" value="Ray"/>
@@ -444,9 +444,9 @@
     <tag group="sRange" tag="Close" name="Close (25 + 5 ft./2 levels)" abbrev="{ref s_Close}Cls{ref}"/>
     </thing>
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: T
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <thing id="spTgtRay" name="Targeting Ray" description="{i}From your clenched fist you produce a luminous ray.  The ray pulsates between the target creature and you.{/i}\n\nThe ray acts as a rangefinder for you and any allies.  You must succeed on a ranged touch attack with the ray to strike a target.  It provides a +1 insight bonus per three caster levels on ranged attacks directed at the subject for the duration of the spell.  Your allies need not see you, but they must be able to see the ray.  You can otherwise act normally for the duration of the spell.  Allies who can see the target of the ray receive the bonus even if you lose line of sight to the target.\n\nSource: Spell Compendium, p219" compset="Spell" summary="Ranged touch grants allies +1 ranged atk bonus per 3 levels">
     <fieldval field="sEffect" value="One or more rays"/>
@@ -473,38 +473,38 @@
     <tag group="sSave" tag="None" name="None" abbrev="None"/>
     </thing>
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: U
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: V
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: W
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: X
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: Y
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Spells: Z
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
   <!--
-  ----------------------------------------------------------------------------
+  ============================================================================
      Unsorted (New entries created by the editor will go after this line)
-  ----------------------------------------------------------------------------
+  ============================================================================
   -->
 </document>
