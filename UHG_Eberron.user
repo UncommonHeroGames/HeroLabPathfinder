@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<document signature="Hero Lab Data">
+  <!--
+  ----------------------------------------------------------------------------
+     Eberron Spells
+  ----------------------------------------------------------------------------
+  -->
+  <thing id="spMgcrft1" name="Magecraft" description="You get a +5 competence bonus on one Craft check representing a day of work crafting an item.  If you cast this  spell every day for a week, you can make a Craft check representing the week&#146;s work and still gain the +5 competence bonus.\nFocus: The tools and other equipment normally required to use the Craft skill to which you apply the bonus." compset="Spell" summary="Subject gains +5 on next Craft check.">
+    <fieldval field="sFocusDesc" value="a tool"/>
+    <fieldval field="sTarget" value="You"/>
+    <fieldval field="sDuration" value="1 day (D)"/>
+    <fieldval field="sSave" value="Will negates (harmless)"/>
+    <fieldval field="sResist" value="Yes (harmless)"/>
+    <usesource source="APG" parent="APGHeader" name="Advanced Player&apos;s Guide"/>
+    <tag group="sDuration" tag="Day" name="1+ Days" abbrev="1+ Days"/>
+    <tag group="sDuration" tag="Dismiss" name="Dismissable" abbrev="Dismissable"/>
+    <tag group="sLevel" tag="1" name="1" abbrev="1"/>
+    <tag group="sResist" tag="Yes" name="Yes" abbrev="Yes"/>
+    <tag group="sSave" tag="WillNeg" name="Will Negates" abbrev="Will Negates"/>
+    <tag group="SpellEff" tag="BuffSkill" name="Increase Skill Bonus" abbrev="Increase Skill Bonus"/>
+    <tag group="sCastTime" tag="Action1" name="1 action" abbrev="1 action"/>
+    <tag group="sClass" tag="cHelpSor" name="Sorcerer" abbrev="Sorcerer"/>
+    <tag group="sClass" tag="cHelpWiz" name="Wizard" abbrev="Wizard"/>
+    <tag group="sComp" tag="F" name="Focus" abbrev="{ref s_F}F{ref}"/>
+    <tag group="sComp" tag="V" name="Verbal" abbrev="{ref s_V}V{ref}"/>
+    <tag group="sSchool" tag="Divination"/>
+    <tag group="sRange" tag="Personal"/>
+    </thing>
+  <thing id="spDimLp2" name="Dimension Leap" description="You instantly transfer yourself from your current loca-tion to another spot within range. The distance traveled must be an increment of 10 feet (10 feet, 20 feet, 30 feet, \nand so on). You always arrive at exactly the spot desired, whether by simply visualizing the area or by stating direction and distance. You can bring along any objects you are touching as the spell is cast, so long as their weight doesn&#146;t exceed your maximum load. You cannot bring along other creatures.\nIf this spell would put you in a place that is already occupied by a solid body, the spell fails.\nSpecial: A character with any Mark of Passage dragon-mark, or with the Favored in House feat (Orien), uses his character level rather than his caster level to determine the \ndistance teleported. \n\n{b}Source:{/b} Magic of Eberron, pg 95" compset="Spell" summary="Teleports you a short distance.">
+    <fieldval field="sTarget" value="You and touched objects or other touched willing creatures"/>
+    <fieldval field="sDuration" value="Instantaneous"/>
+    <fieldval field="sSave" value="None"/>
+    <fieldval field="sResist" value="No"/>
+    <tag group="sDuration" tag="Instant" name="Instantaneous" abbrev="Instantaneous"/>
+    <tag group="sLevel" tag="2"/>
+    <tag group="sSave" tag="None" name="None" abbrev="None"/>
+    <tag group="sSchool" tag="Conjur" name="Conjuration" abbrev="Conjur"/>
+    <tag group="sSubschool" tag="Teleport" name="Teleport" abbrev="Teleport"/>
+    <tag group="sCastTime" tag="Action1" name="1 action" abbrev="1 action"/>
+    <tag group="sClass" tag="cHelpBrd" name="Bard" abbrev="Bard"/>
+    <tag group="sClass" tag="cHelpSor" name="Sorcerer" abbrev="Sorcerer"/>
+    <tag group="sClass" tag="cHelpWiz" name="Wizard" abbrev="Wizard"/>
+    <tag group="sResist" tag="No"/>
+    <tag group="sRange" tag="SeeText"/>
+    <tag group="sComp" tag="V" name="Verbal" abbrev="{ref s_V}V{ref}"/>
+    </thing>
+  <thing id="spUnsCrft2" name="Unseen Crafter" description="This spell functions as unseen servant, except that the unseen crafter can be assigned any one task that can be accomplished by the use of the Craft skill. Appropriate tools and materials must be provided for the unseen crafter; it makes Craft checks using your ranks in the skill plus your bonus for the relevant spellcasting ability (Intelligence for artificers, wizards, and magewrights, Charisma for bards and sorcerers, and Wisdom for clerics).\nAn unseen crafter can take 10 or attempt to work more quickly (as described in the Craft skill description, page 70 of the Player&#146;s Handbook), but this must be part of the command it is given when the spell is cast. Once the unseen crafter has completed the assigned task, the spell ends as if dismissed. If the unseen crafter leaves work undone, any creature or another unseen crafter can continue it.\nSpecial: When the unseen crafter is commanded to repair a war-forged, it receives a +10 bonus on its Craft check." compset="Spell" summary="Invisible force obeys your commands.">
+    <fieldval field="sEffect" value="One invisible, mindless, shapeless servant"/>
+    <fieldval field="sDuration" value="1 day/level (D)"/>
+    <fieldval field="sSave" value="None"/>
+    <fieldval field="sResist" value="No"/>
+    <tag group="sClass" tag="cHelpWiz" name="Wizard" abbrev="Wizard"/>
+    <tag group="sComp" tag="S" name="Somatic" abbrev="{ref s_S}S{ref}"/>
+    <tag group="sComp" tag="V" name="Verbal" abbrev="{ref s_V}V{ref}"/>
+    <tag group="sDuration" tag="PerLevel" name="Level-based" abbrev="Level-based"/>
+    <tag group="sLevel" tag="2"/>
+    <tag group="sRange" tag="Close" name="Close (25 + 5 ft./2 levels)" abbrev="{ref s_Close}Cls{ref}"/>
+    <tag group="sResist" tag="No" name="No" abbrev="No"/>
+    <tag group="sSave" tag="None" name="None" abbrev="None"/>
+    <tag group="sSchool" tag="Conjur" name="Conjuration" abbrev="Conjur"/>
+    <tag group="sSubschool" tag="Creation" name="Creation" abbrev="Creation"/>
+    <tag group="sCastTime" tag="Action1" name="1 action" abbrev="1 action"/>
+    <tag group="sClass" tag="cHelpBrd" name="Bard" abbrev="Bard"/>
+    <tag group="sClass" tag="cHelpMag" name="Magus" abbrev="Magus"/>
+    <tag group="sClass" tag="cHelpSor" name="Sorcerer" abbrev="Sorcerer"/>
+    <tag group="sClass" tag="cHelpClr"/>
+    <tag group="sDuration" tag="Day"/>
+    </thing>
+  <thing id="spInfSpi" name="Inferno Spiral (Artifact)" description="You shoot a line of fire that deals 1d8 points of fire damage per caster level (maximum 10d8) to each creature within its area.  The spiraling bolt sets fire to combustibles and damages objects in its path.  If the damage is sufficient to burn through a barrier that blocks its path, the inferno spiral continues if its range permits; otherwise it stops at the barrier just as any other spell effect does.\n\n-----------------------\nArtifact Spells\n-----------------------\n\nThe giants of Xen&apos;drik developed spells and powers far beyond those of modern spellcasters.  Their dragon-taught magic rained acid from the skies, tore the ground asunder, and shattered the connection between Eberron and Dal&apos;Quor.  While much of this magic is now beyond the reach of all but epic spellcastesr, some of the magical lore of the giants lives on in the form of artifact spells.\n\nAnyone capable of casting a spell of the proper level and type (arcane or divine) can learn to cast an artifact spell.  However, though artifact spells must be studied like any other, they are too complex and difficult to fully comprehend, and so they cannot be added to a caster&apos;s normal repertoire or translated into written form.  Those who study one of these spells gain the ability to prepare or spontaneously cast the spell only once.\n\nA spellcaster must study the appropriate runes and formulas for 1d4 hours and succeed on a Spellcraft check (DC 15 + twice the spell&apos;s level) in order to comprehend an artifact spell.  A failed check can be repeated in 24 hours.  A character cannot take 10 on this check.\n\nOnce an artifact spell has been learned, a character can cast the spell once during the next year.  If it is not cast within one year, the spell fades and is lost.  A character who prepares spells can prepare an artifact spell in an appropriate slot.  If the artifact spell is not cast (if its spell slot is used for some other purpose, for example), it can be prepared again at a later date within the year.  A character who casts spells spontaneously can simply cast the artifct spell using a spell slot of the appropriate level.  Because an artifact spell is learned only temporarily, it does not replace one of a spontaneous caster&apos;s known spells.\n\nArtifact spells never have a material component or an arcane focus, though divine artifact spells might have a divine focus.  An artifact spell can&apos;t be modified by any metamagic feat or effect.  An artifact spell cannot be made into a potion, scroll, or other magic item.  A caster cannot possess the ability to cast a given artifact spell more than once, although once cast (or if lost after a year has passed), the spell can be renewed if the ancient source is studied again." compset="Spell" summary="1d8/level fire damage.">
+    <fieldval field="sMythic" value="The damage dealt increases to 1d10 points of cold damage per caster level (maximum 15d10). Any creature that fails its save is partially encased in ice, reducing its speed by half. Creatures with the cold or incorporeal subtype or immunity to being grappled are immune to this effect. The reduced movement lasts until the ice is destroyed. Destroying the ice requires a successful Strength or dispel check against the spell&apos;s DC, or dealing bludgeoning or fire damage equal to 1 point per caster level to the creature.{br}{br}Augmented: You can expend two uses of mythic power to transform the spell&apos;s cold into a barrage of giant hailstones, icicles, or shards. Half the spell&apos;s damage is your choice of bludgeoning, piercing, or slashing damage, and the other half is cold damage."/>
+    <fieldval field="sRange" value="60 ft."/>
+    <fieldval field="sDuration" value="Instantaneous"/>
+    <fieldval field="sSave" value="Reflex half"/>
+    <fieldval field="sResist" value="Yes"/>
+    <fieldval field="sArea" value="60-ft. line"/>
+    <tag group="sDuration" tag="Instant" name="Instantaneous" abbrev="Instantaneous"/>
+    <tag group="sLevel" tag="3"/>
+    <tag group="sResist" tag="Yes" name="Yes" abbrev="Yes"/>
+    <tag group="sSave" tag="RefHalf" name="Reflex Half" abbrev="Reflex Half"/>
+    <tag group="sSchool" tag="Evocation" name="Evocation" abbrev="Evoc"/>
+    <tag group="sCastTime" tag="Action1"/>
+    <tag group="sClass" tag="cHelpMag" name="Magus" abbrev="Magus"/>
+    <tag group="sClass" tag="cHelpSor" name="Sorcerer" abbrev="Sorcerer"/>
+    <tag group="sClass" tag="cHelpWiz" name="Wizard" abbrev="Wizard"/>
+    <tag group="sComp" tag="S" name="Somatic" abbrev="{ref s_S}S{ref}"/>
+    <tag group="sDescript" tag="Fire"/>
+    <tag group="SpellEff" tag="DamFire"/>
+    <tag group="sSchool" tag="Fire"/>
+    <tag group="sRange" tag="60"/>
+    <tag group="sRange" tag="Feet"/>
+    <tag group="sComp" tag="V" name="Verbal" abbrev="{ref s_V}V{ref}"/>
+    </thing>
+  <thing id="spIvkElm" name="Invoke Elemental" description="You temporarily release a bound elemental and compel it to obey you.  In the round you cast this spell, you must touch the vehicle to which the elemental has been bound, with the elemental appearing adjacent to you when the casting is complete.  The elemental acts immediately on your turn, attacking your opponents to the best of its ability.  You can verbally direct the elemental not to attack, to attack particular enemies, or to perform other actions.\n\nWhile the elemental is invoked, it is no longer bound to the target vehicle.  The vehicle is treated as if the elemental is suppressed until the spell ends.  Should the elmental be destroyed or affected by a spell that would send it back to its plane of origin while it is invoked, it vanishes and remains suppressed for 24 hours, during which time it cannot be invoked again with this spell.\n\nYou can dismiss this effect as a free action on your turn, sending the elemental back to its bound state.  If the elemental is uncontrolled at the time the spell is cast (or controlled by someone other than you), it receives a Will saving throw to resist the spell." compset="Spell" summary="Invokes vehicle-bound elemental to fight for you.">
+    <fieldval field="sDuration" value="1 round/level (D)"/>
+    <fieldval field="sSave" value="Will negates (see text)"/>
+    <fieldval field="sResist" value="No"/>
+    <fieldval field="sTarget" value="Vehicle with a bound elemental touched"/>
+    <tag group="sComp" tag="V" name="Verbal" abbrev="{ref s_V}V{ref}"/>
+    <tag group="sDuration" tag="PerLevel" name="Level-based" abbrev="Level-based"/>
+    <tag group="sDuration" tag="Round" name="1+ Rounds" abbrev="1+ Rounds"/>
+    <tag group="sLevel" tag="5"/>
+    <tag group="sResist" tag="No" name="No" abbrev="No"/>
+    <tag group="sSchool" tag="Conjur" name="Conjuration" abbrev="Conjur"/>
+    <tag group="sSubschool" tag="Summoning" name="Summoning" abbrev="Summoning"/>
+    <tag group="sCastTime" tag="Round1" name="1 round" abbrev="1 round"/>
+    <tag group="sClass" tag="cHelpSor" name="Sorcerer" abbrev="Sorcerer"/>
+    <tag group="sClass" tag="cHelpWiz" name="Wizard" abbrev="Wizard"/>
+    <tag group="sRange" tag="Touch"/>
+    <tag group="sComp" tag="S" name="Somatic" abbrev="{ref s_S}S{ref}"/>
+    <tag group="sSave" tag="SeeText"/>
+    <tag group="sSave" tag="WillNeg"/>
+    </thing>
+  <thing id="spMConEss" name="Construct Essence" description="As {i}Lesser Construct Essence{/i}, with the following additional effects. The living construct becomes immune to critical hits, sneak attacks, ability damage, ability drain, death effects, and necromancy effects. The living construct also gains darkvision out to 60 feet.\n\nThis spell counters and dispels lesser humanoid essence andhumanoid essence. If this spell is cast on a creature under the effect of {i}lesser humanoid essence{/i}, the latter spell is automatically ended. If this spell is cast on a creature under the effect of {i}humanoid essence{/i}, both spells are dispelled and have no effect. It has no effect if cast on a creature under the effect of {i}greater humanoid essence{/i}.\n\n{b}Construct Essence, Lesser{/b}\n\nWhen this spell is cast upon a living construct, it takes on more of the qualities of a true construct. The living construct gains the moderate fortification armor special quality, negating critical hits and sneak attacks 75% of the time. As well, the living construct gains low-light vision and immunity to nonlethal damage and stunning." compset="Spell" summary="You gain construct traits">
+    <fieldval field="sTarget" value="Living construct touched"/>
+    <fieldval field="sDuration" value="1 min./level"/>
+    <fieldval field="shortname" value="Construct Essence"/>
+    <tag group="sComp" tag="S" name="Somatic" abbrev="{ref s_S}S{ref}"/>
+    <tag group="sComp" tag="V" name="Verbal" abbrev="{ref s_V}V{ref}"/>
+    <tag group="sDuration" tag="Minute" name="1+ Minutes" abbrev="1+ Minutes"/>
+    <tag group="sDuration" tag="PerLevel" name="Level-based" abbrev="Level-based"/>
+    <tag group="sLevel" tag="5"/>
+    <tag group="sSchool" tag="Transmutat" name="Transmutation" abbrev="Trans"/>
+    <tag group="sCastTime" tag="Action1" name="1 action" abbrev="1 action"/>
+    <tag group="sClass" tag="cHelpSor" name="Sorcerer" abbrev="Sorcerer"/>
+    <tag group="sClass" tag="cHelpWiz" name="Wizard" abbrev="Wizard"/>
+    <tag group="sRange" tag="Touch"/>
+    <tag group="sSave" tag="Harmless"/>
+    <tag group="sSave" tag="WillNeg"/>
+    <tag group="sResist" tag="Harmless"/>
+    <tag group="sResist" tag="Yes"/>
+    </thing>
+  <!--
+  ----------------------------------------------------------------------------
+     Eberron Armor Properties
+  ----------------------------------------------------------------------------
+  -->
+  <thing id="ipMindarmr" name="Mindarmor" description="{i}Constructed of seamless and tightly-bound layers, this item steadies your thoughts when worn.{/i}\n\nWhen activated, a suit of armor or shield that has this property grants you a +5 bonus on Will save to resist mind-affecting spells and abilities until the start of your next turn.\n\nThe mindarmor property functions three times per day.\n\n{b}Construction{/b}\n{b}Requirements{/b}: Craft Magic Arms and Armor, {i}heroism{/i} or {i}empty mind (EPH 99){/i}; {b}Cost{/b} 1,500gp" compset="ItemPower" summary="Gain +5 bonus to Will against mind-affecting, 3/day" uniqueness="useronce">
+    <fieldval field="iCL" value="5"/>
+    <fieldval field="iPriceCash" value="3000"/>
+    <fieldval field="trkMax" value="3"/>
+    <fieldval field="actName" value="Mindarmor Effect (+5 Will)"/>
+    <usesource source="srcMIC"/>
+    <tag group="iSchool" tag="Enchant"/>
+    <tag group="User" tag="Tracker"/>
+    <tag group="Helper" tag="Shadow" name="Shadow" abbrev="Shadow"/>
+    <tag group="Usage" tag="Day"/>
+    <tag group="User" tag="Activation"/>
+    <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="PowerType" tag="Armor"/>
+    </thing>
+  <thing id="ipTwilight" name="Twilight" description="{i}This armor possesses a faint, sunset-colored sheen.{/i}\n\nArmor that has this property is favored by elves and other characters who mix arcane magic and melee combat.  A suit of twilight armor looks translucent and semi-incorporeal when donned, reducing the chance of arcane spell failure by 10%.\n\n{b}Construction{/b}\n{b}Requirements{/b}: Craft Magic Arms and Armor, {i}cat&apos;s grace{/i}; {b}Cost{/b} +1 Bonus\n\n{b}Source:{/b} Magic Item Compendium (pg 15)" compset="ItemPower" summary="Armor has 10% less arcane spell failure chance" uniqueness="useronce">
+    <fieldval field="iPrice" value="1"/>
+    <fieldval field="abDC" value="14"/>
+    <fieldval field="iCL" value="5"/>
+    <usesource source="srcMIC"/>
+    <tag group="iSchool" tag="Transmutat"/>
+    <tag group="PowerType" tag="Armor" name="Armor" abbrev="Armor"/>
+    <tag group="PowerReq" tag="Armor"/>
+    <eval phase="PreLevel" priority="5000">~ Armor -10% spell failure
+container.parent.field[arArcFail].value = maximum( container.parent.field[arArcFail].value - 10, 0 )</eval>
+    </thing>
+  <thing id="ipCastArmr" name="Caster Armor" description="Most common in magic-rich societies, some armorsmiths specialize in creating suits of armor specifically designed for the needs of spellcasters.  Craftsmen occasionally create more flexible armor that allows for the complicated movements of somatic components.  A suit of armor with this item quality reduces the chance of arcane spell failure by 5%, making it easier for a caster to wear without interrupting spellcasting.\n\n{b}Restriction:{/b} May only be applied to armor with an arcane spell failure chance.\n\n{b}Additional Cost:{/b} +400gp (light), +800gp (medium), +1000gp (heavy), +7 to craft DC of masterwork component.\n\n{b}Source:{/b} Dragon Magazine 358 (Aug. 2007), pg 39" compset="ItemPower" summary="Armor has 5% less arcane spell failure chance" uniqueness="useronce">
+    <fieldval field="abDC" value="14"/>
+    <fieldval field="iPriceCash" value="800"/>
+    <usesource source="srcMIC"/>
+    <tag group="PowerReq" tag="Armor"/>
+    <tag group="Helper" tag="NotMagicPw"/>
+    <tag group="PowerType" tag="Armor" name="Armor" abbrev="Armor"/>
+    <tag group="Helper" tag="NoPathSoc"/>
+    <eval phase="PreLevel" priority="5000">~ Armor -5% spell failure
+container.parent.field[arArcFail].value = maximum( container.parent.field[arArcFail].value - 5, 0 )</eval>
+    </thing>
+  <!--
+  ----------------------------------------------------------------------------
+     Eberron Items
+  ----------------------------------------------------------------------------
+  -->
+  <thing id="ioPhtLib" name="Necklace of the Phantom Library" description="A necklace of the phantom library is a necklace made of golden chain with five lozenge-shaped Siberys dragonshards set among the links at equal intervals.  It is primarily a storage device - the ancient giants&apos; equivalent to a present-day wizard&apos;s spellbook.  A necklace holds 500 pages worth of spells, and you can purge the necklace of unwanted spells witha  moment&apos;s thought.  You can inscribe new spells into a necklace of the phantom library by wearing the necklace, then tracing the necessary sigils in the air before you.  You can thus copy spells without paying the material cost, and the process takes only 20 minutes per spell level.  Cantrips (0 level spells) take 10 minutes to record.\n\nOnce you don the necklace, yellow-orange sigils appear in the air about two feet from your face.  These sigils are the spells inscribed within the necklace, and you can move from spell to spell with a thought, the sigils spinning through your field of vision (an effect that looks a little like a scrolling microfiche reader).  They obscure the rest of your vision, granting total concealment to anyone who isn&apos;t adjacent to you.  Anyone else can see you just fine, however, making it a good idea to take the necklace off prior to combat.\n\nIt takes a standard action to put a necklace on or take it off.  Moving from spell to spell is a free action.  As a practical matter, you&apos;ll wear the necklace only when you&apos;re preparing your spells, so the exact timing of your actions doesn&apos;t matter.\n\n{b}Construction Requirements:{/b} \nUnknown" compset="Wondrous" summary="Necklace stores magically-displayed library of spells" holdable="no">
+    <fieldval field="gCost" value="1500"/>
+    <fieldval field="iCL" value="11"/>
+    <fieldval field="shortname" value="Phantom Library"/>
+    <fieldval field="actName" value="Varies (see text)"/>
+    <tag group="iSchool" tag="Abjur" name="Abjuration" abbrev="Abjur"/>
+    <tag group="iSchool" tag="Conjur" name="Conjuration" abbrev="Conjur"/>
+    <tag group="Helper" tag="EquipAvail" name="EquipAvail" abbrev="EquipAvail"/>
+    <tag group="Helper" tag="EquipMag" name="EquipMag" abbrev="EquipMag"/>
+    <tag group="Hero" tag="EqpNeck" name="Neck" abbrev="Neck"/>
+    <tag group="Helper" tag="ArtiMinor"/>
+    <tag group="gType" tag="Wonder" name="Wondrous Item" abbrev="Wonder"/>
+    </thing>
+  <!--
+  ----------------------------------------------------------------------------
+     Unsorted (New entries created by the editor will go after this line)
+  ----------------------------------------------------------------------------
+  -->
+  <thing id="wMachGun" name="Machine Gun" description="Machine Gun\nDamage: 2d8\nCritical: x4\nRange Increment: 120 ft (touch range 600, max range 1200)\nMisfire: 1-2 (gains broken condition, but does not explode on subsequent misfires)\nCapacity: 250\nWeight: 140 lbs (does not count toward carrying capacity when mounted)\nType: B and P\nSpecial: Automatic\n \nThis heavy advanced two-handed firearm uses ammunition in 250-round belts. A belt is considered an ammunition container for the purposes of reloading a firearm and requires a swift action to load an advanced firearm to its capacity. Although a single person can fire a machine gun, it typically has a two-person crew: the gunner, and a loader who assists with feeding the ammunition belt into the weapon. As a full-round action, the loader can use a special aid another action to grant the gunner a +2 bonus on his next attack roll. Because of its size and heavy weight, a machine gun is often either mounted on a wheeled chassis with a gun shield for trench defensive use, or on the back of a horse-drawn Wagon. Assuming a user can even lift the weapon, firing a machine gun that is not mounted imparts a &#150;4 penalty on attack rolls and the recoil knocks the wielder prone. A machine gun is automatic-fire only. The armored shield provides cover when firing the weapon from the prone position.\n \nAutomatic Weapon Quality: A weapon with the automatic weapon quality fires a burst of bullets with a single pull of the trigger, attacking all creatures in a line. This line starts from any corner of your space and extends to the limit of the weapon&#146;s range or until it strikes a barrier it cannot penetrate. When an automatic weapon attacks all creatures in a line, it makes a separate attack roll against each creature in the line. Each creature in the line can only be attacked with one bullet from each burst. Each attack roll takes a &#150;2 penalty to account for recoil, and its attack damage cannot be modified by precision damage or damage-increasing feats such as Vital Strike. Effects that grant concealment, such as fog or smoke, or the blur, invisibility, or mirror image spells, do not foil an automatic weapon&#146;s line attack. If any of the attack rolls threaten a critical hit, confirm the critical for that attack roll alone. An automatic weapon misfires only if all of the attack rolls made misfire. A single attack with an automatic weapon fires 10 bullets. An automatic weapon cannot fire single bullets that target one creature. When taking a full-attack action with an automatic weapon, you can fire as many bursts in a round as you have attacks.\n \n\nSo basically what this means is that yalls can wheel this thing around just like a double hackbut, except it doesn&#146;t take any time to set it up to fire. It&#146;s a two-handed weapon and doesn&#146;t have its own space. Anyone proficient in firearms can use this. Actually, anyone at all can, but you take a -4 to attack rolls, and misfire on a roll of 1 to 4, so it&#146;s a good idea to be proficient.  A machine gun belt falls under the category of ammunition container. That means you can cast abundant ammunition onto it, as well as any other spell that enhances projectiles, such as align weapon or magic weapon." compset="Weapon">
+    <fieldval field="gSizeCost" value="15000"/>
+    <fieldval field="wCapacity" value="25"/>
+    <fieldval field="wMisfire" value="2"/>
+    <fieldval field="gWeight" value="140"/>
+    <usesource source="UltEquip" parent="UEHeader" name="Ultimate Equipment"/>
+    <usesource source="UltCombat" parent="UCHeader" name="Ultimate Combat"/>
+    <tag group="wCritMin" tag="20" name="20" abbrev="20"/>
+    <tag group="wCritMult" tag="4" name="4" abbrev="4"/>
+    <tag group="wFtrGroup" tag="Firearms" name="Firearms" abbrev="Firearms"/>
+    <tag group="wMain" tag="2d8_305"/>
+    <tag group="wProfReq" tag="Firearm2" name="Two-Handed Firearm" abbrev="Two-Handed Firearm"/>
+    <tag group="wRangeInc" tag="120"/>
+    <tag group="wType" tag="B" name="Bludgeoning" abbrev="B"/>
+    <tag group="wType" tag="P" name="Piercing" abbrev="P"/>
+    <tag group="w1HandPen" tag="4" name="4" abbrev="4"/>
+    <tag group="EquipType" tag="Metal" name="Metal" abbrev="Metal"/>
+    <tag group="Helper" tag="BucklerOK" name="BucklerOK" abbrev="BucklerOK"/>
+    <tag group="Helper" tag="NoPathSoc" name="Not Allowed for Pathfinder Society Characters" abbrev="Not Allowed for Pathfinder Society Characters"/>
+    <tag group="SpecGroup" tag="FireAdvan" name="Firearm, Advanced" abbrev="Firearm, Advanced"/>
+    <tag group="wCategory" tag="Firearm" name="Firearm" abbrev="Firearm"/>
+    <tag group="wCategory" tag="RangeProj" name="Projectile Weapon" abbrev="Projectile"/>
+    <tag group="wClass" tag="TwoHanded" name="Two-Handed" abbrev="Two-Handed"/>
+    </thing>
+  </document>

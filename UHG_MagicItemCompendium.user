@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document signature="Hero Lab Data">
+  <thing id="ioGlvStrSk" name="Gloves of the Starry Sky" description="{i}These supple gloves are velvet black. In their darkness, stars seem to swim.{/i}\n\nWhile wearing {i}Gloves of the Starry Sky{/i}, you emit a bright, silvery radiance equivalent to a {i}Light{/i} spell. You can douse or renew this light with a standard (mental) action.\n\nIn addition, three times per day you can activate these gloves and sacrifice a prepared spell or spell slot of 1st level or higher to use {i}Magic Missile{/i} (as the spell), using your own caster level rather than that of the gloves. The missiles created by the gloves appear as a series of tiny falling stars.\n\n{b}Construction{/b}\n{b}Requirements{/b} Craft Wondrous Item, {i}Magic Missile{/i}; {b}Cost{/b} 550 gp" compset="Wondrous">
+    <fieldval field="gCost" value="1100"/>
+    <fieldval field="iCL" value="3"/>
+    <fieldval field="trkMax" value="3"/>
+    <usesource source="srcMIC"/>
+    <tag group="Helper" tag="EquipAvail" name="EquipAvail" abbrev="EquipAvail"/>
+    <tag group="Helper" tag="EquipMag" name="EquipMag" abbrev="EquipMag"/>
+    <tag group="iSchool" tag="Evocation"/>
+    <tag group="User" tag="Tracker"/>
+    <tag group="Hero" tag="EqpHand"/>
+    <tag group="Usage" tag="Day"/>
+    <tag group="gType" tag="Wonder" name="Wondrous Item" abbrev="Wonder"/>
+    </thing>
+  <thing id="ioAnkTrs" name="Anklet of Translocation" description="An anklet of translocation allows you to make short dimensional hops.  When it is activated, you can instantly teleport (with no chance of error) up to 10 feet.  The new space must be within line of sight and line of effect.\n\nYou can&apos;t use the anklet ot move into a space occupied by another creature, nor can you teleport into a solid object; if you attempt to do so, the anklet&apos;s activation is wasted.  You can bring along objects weighing up to your maximum load, but you can&apos;t bring another creature with you.\n\nAn anklet of translocation functions two times per day.\n\n{b}Construction Requirements{/b}:\nCraft Wondrous Item, {i}dimension door{/i}\n{b}Cost:{/b} 700 gp" compset="Wondrous" holdable="no">
+    <fieldval field="gCost" value="1400"/>
+    <fieldval field="iCL" value="7"/>
+    <fieldval field="trkMax" value="2"/>
+    <usesource source="srcMIC"/>
+    <tag group="gType" tag="Wonder" name="Wondrous Item" abbrev="Wonder"/>
+    <tag group="iSchool" tag="Conjur" name="Conjuration" abbrev="Conjur"/>
+    <tag group="Helper" tag="EquipAvail" name="EquipAvail" abbrev="EquipAvail"/>
+    <tag group="Helper" tag="EquipMag" name="EquipMag" abbrev="EquipMag"/>
+    <tag group="Usage" tag="Day"/>
+    <tag group="Helper" tag="StatComGr" name="Statblock: Combat Gear" abbrev="Statblock: Combat Gear"/>
+    <tag group="User" tag="Tracker"/>
+    <tag group="Hero" tag="EqpFoot" name="Feet" abbrev="Feet"/>
+    </thing>
+  <thing id="ioWldMem" name="Tome of Worldly Memory" description="A tome of worldly memory allows you to call upon the secret memories of the world to aid you in unlocking forgotten knowledge.  By studying the book for 1 minute, you gain a +5 competence bonus on a single Knowledge check.\n\nIf you have at least 5 ranks in the Knowledge skill in question, you need only peruse the book as a standard action to gain its benefit.\n\nThe tome functions three times per day.\n\n{b}Construction Requirements:{/b}\nCraft Wondrous Item, {i}fox&apos;s cunning{/i};\n{b}Cost:{/b} 750 gp" compset="Wondrous">
+    <fieldval field="gCost" value="1500"/>
+    <fieldval field="iCL" value="9"/>
+    <fieldval field="gWeight" value="1"/>
+    <fieldval field="trkMax" value="3"/>
+    <tag group="Helper" tag="EquipAvail" name="EquipAvail" abbrev="EquipAvail"/>
+    <tag group="Helper" tag="StatComGr" name="Statblock: Combat Gear" abbrev="Statblock: Combat Gear"/>
+    <tag group="gType" tag="Wonder" name="Wondrous Item" abbrev="Wonder"/>
+    <tag group="User" tag="Tracker"/>
+    <tag group="Usage" tag="Day"/>
+    <tag group="iSchool" tag="Conjur" name="Conjuration" abbrev="Conjur"/>
+    </thing>
+    <thing id="ioScrShd" name="Scrying Shard" description="Ever-shifting, deep red swirls writhe within this fist-sized Eberron shard.  A character of any class can cast scrying using a scrying shard as a focus.\n\n{b}Construction Requirements:{/b}\nCraft Wondrous Item, {i}scrying{/i}\n{b}Cost:{/b} 675 gp" compset="Wondrous" holdable="no">
+    <fieldval field="gWeight" value="1"/>
+    <fieldval field="gCost" value="1350"/>
+    <fieldval field="iCL" value="7"/>
+    <fieldval field="trkMax" value="1"/>
+    <usesource source="srcMIC"/>
+    <tag group="iSchool" tag="Divination"/>
+    <tag group="gType" tag="Wonder" name="Wondrous Item" abbrev="Wonder"/>
+    </thing>
+      <thing id="ioCCCelWan" name="Chronocharm of the Celestial Wanderer" description="{i}This charm resembles an ebony starburst.{/i}\n\nA chronocharm of the celestial wanderer slows your perception of time, allowing you a second chance to recognize potential danger.  When you activate this chronocharm, you can immediately reroll a single Perception check that you just attempted.  The result of the second roll replaces the first result.\n\nThis ability functions once per day.\n\n{b}Construction{/b}\n{b}Requirements{/b} Craft Wondrous Item, {i}hawkeye (SC110){/i}; {b}Cost{/b} 250 gp\n\n{b}Chronocharm{/b}\nA chronocharm occupies the neck body slot, but it c be worn simutaneously with any number of other chronocharms, which all function normally.  However, you can&apos;t wear more than one of the same chronocharm.\n\nYou must wear a chronocharm for 24 hours before you can access its abilities.  If it is taken off, it becomes inactive until worn for an additional 24 hours.\n\n{b}Source:{/b} Magic Item Compendium, pg 85" compset="Wondrous" summary="Reroll perception 1/day">
+    <fieldval field="gCost" value="500"/>
+    <fieldval field="iCL" value="5"/>
+    <fieldval field="trkMax" value="1"/>
+    <fieldval field="shortname" value="Chronocharm: Cel. Wanderer"/>
+    <usesource source="srcMIC" parent="UserParent" name="Magic Item Compendium"/>
+    <tag group="Hero" tag="EqpNeck" name="Neck" abbrev="Neck"/>
+    <tag group="Helper" tag="EquipAvail"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="abAction" tag="Immediate"/>
+    <tag group="Usage" tag="Day"/>
+    <tag group="gType" tag="Wonder" name="Wondrous Item" abbrev="Wonder"/>
+    <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="Helper" tag="EquipMag" name="EquipMag" abbrev="EquipMag"/>
+    <tag group="iSchool" tag="Transmutat" name="Transmutation" abbrev="Trans"/>
+    <tag group="User" tag="Tracker"/>
+    </thing>
+  <thing id="ioCCFtwvr" name="Chronocharm of the Fateweaver" description="{i}This tiny golden spindle dangles from a thin chain of gray steel.{/i}\n\nA chronocharm of the fateweaver slows your perception of time, letting you avoid an ill-advised step.  When you activate this chronocharm, you can immediately reroll a single Acrobatics or Climb check that you just attempted.  The result of the second roll replaces the first result.\n\nThis ability functions once per day.\n\n{b}Construction{/b}\n{b}Requirements{/b} Craft Wondrous Item, {i}cat&apos;s grace{/i}; {b}Cost{/b} 250 gp\n\n{b}Chronocharm{/b}\nA chronocharm occupies the neck body slot, but it c be worn simutaneously with any number of other chronocharms, which all function normally.  However, you can&apos;t wear more than one of the same chronocharm.\n\nYou must wear a chronocharm for 24 hours before you can access its abilities.  If it is taken off, it becomes inactive until worn for an additional 24 hours.\n\n{b}Source:{/b} Magic Item Compendium, pg 85" compset="Wondrous" summary="Reroll acrobatics or climb 1/day">
+    <fieldval field="gCost" value="500"/>
+    <fieldval field="iCL" value="3"/>
+    <fieldval field="trkMax" value="1"/>
+    <fieldval field="shortname" value="Chronocharm: Fateweaver"/>
+    <usesource source="srcMIC" parent="UserParent" name="Magic Item Compendium"/>
+    <tag group="Hero" tag="EqpNeck" name="Neck" abbrev="Neck"/>
+    <tag group="Helper" tag="EquipAvail"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="abAction" tag="Immediate"/>
+    <tag group="Usage" tag="Day"/>
+    <tag group="gType" tag="Wonder" name="Wondrous Item" abbrev="Wonder"/>
+    <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="Helper" tag="EquipMag" name="EquipMag" abbrev="EquipMag"/>
+    <tag group="iSchool" tag="Transmutat" name="Transmutation" abbrev="Trans"/>
+    <tag group="User" tag="Tracker"/>
+    </thing>
+  <thing id="ioCCGrdMst" name="Chronocharm of the Grand Master" description="{i}This tiny hollow glass flower dangles from a slim golden chain.{/i}\n\nA chronocharm of the grand master slows your perception of time, allowing you to better dodge an incoming ranged attack.  When you activate this chronocharm, you gain a +5 dodge bonus to your AC against a single ranged attack.\n\nThis ability functions once per day.\n\n{b}Construction{/b}\n{b}Requirements{/b} Craft Wondrous Item, {i}cat&apos;s grace{/i}; {b}Cost{/b} 250 gp\n\n{b}Chronocharm{/b}\nA chronocharm occupies the neck body slot, but it c be worn simutaneously with any number of other chronocharms, which all function normally.  However, you can&apos;t wear more than one of the same chronocharm.\n\nYou must wear a chronocharm for 24 hours before you can access its abilities.  If it is taken off, it becomes inactive until worn for an additional 24 hours.\n\n{b}Source:{/b} Magic Item Compendium, pg 86" compset="Wondrous" summary="Gain +5 dodge to AC vs. ranged 1/day">
+    <fieldval field="gCost" value="500"/>
+    <fieldval field="iCL" value="3"/>
+    <fieldval field="trkMax" value="1"/>
+    <fieldval field="shortname" value="Chronocharm: Grand Master"/>
+    <fieldval field="actName" value="Chronocharm: +5 Dodge to AC"/>
+    <usesource source="srcMIC" parent="UserParent" name="Magic Item Compendium"/>
+    <tag group="Helper" tag="EquipAvail"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="abAction" tag="Immediate"/>
+    <tag group="Usage" tag="Day"/>
+    <tag group="gType" tag="Wonder" name="Wondrous Item" abbrev="Wonder"/>
+    <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="Hero" tag="EqpNeck" name="Neck" abbrev="Neck"/>
+    <tag group="iSchool" tag="Transmutat" name="Transmutation" abbrev="Trans"/>
+    <tag group="User" tag="Activation"/>
+    <tag group="Helper" tag="EquipMag" name="EquipMag" abbrev="EquipMag"/>
+    <tag group="User" tag="Tracker"/>
+    <eval phase="PreLevel" priority="5000"><![CDATA[
+      doneif (field[gIsEquip].value = 0)
+
+      if (field[abilActive].value <> 0) then
+        hero.child[ArmorClass].field[tACDodge].value = maximum(hero.child[ArmorClass].field[tACDodge].value, 5)
+        endif]]></eval>
+    </thing>
+  <thing id="ioCCHrzWlk" name="Chronocharm of the Horizon Walker" description="{i}This charm shows a rising sun half-obscured by the horizon.{/i}\n\nLike other chronocharms, this item slows your perception of time for a specific, singular purpose.  When you activate a chronocharm of the horizon walker, you can move up to half your speed s prt of the same swift action used to activate it; this movement does not provoke attacks of opportunity.  When determining the distance you can move, round down to the nearest 5-foot increment. \n\nThis ability functions once per day.\n\n{b}Construction{/b}\n{b}Requirements{/b} Craft Wondrous Item, {i}expeditious retreat{/i}; {b}Cost{/b} 250 gp\n\n{b}Chronocharm{/b}\nA chronocharm occupies the neck body slot, but it c be worn simutaneously with any number of other chronocharms, which all function normally.  However, you can&apos;t wear more than one of the same chronocharm.\n\nYou must wear a chronocharm for 24 hours before you can access its abilities.  If it is taken off, it becomes inactive until worn for an additional 24 hours.\n\n{b}Source:{/b} Magic Item Compendium, pg 86" compset="Wondrous" summary="Move half your speed without provoking AoO as swift action, 1/day">
+    <fieldval field="gCost" value="500"/>
+    <fieldval field="iCL" value="3"/>
+    <fieldval field="trkMax" value="1"/>
+    <fieldval field="shortname" value="Chronocharm: Horizon Walker"/>
+    <usesource source="srcMIC" parent="UserParent" name="Magic Item Compendium"/>
+    <tag group="Hero" tag="EqpNeck" name="Neck" abbrev="Neck"/>
+    <tag group="Helper" tag="EquipAvail"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="Usage" tag="Day"/>
+    <tag group="gType" tag="Wonder" name="Wondrous Item" abbrev="Wonder"/>
+    <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="Helper" tag="EquipMag" name="EquipMag" abbrev="EquipMag"/>
+    <tag group="iSchool" tag="Transmutat" name="Transmutation" abbrev="Trans"/>
+    <tag group="User" tag="Tracker"/>
+    <tag group="abAction" tag="Swift"/>
+    </thing>
+  <thing id="ioCCLghRog" name="Chronocharm of the Laughing Rogue" description="{i}This miniature hourglass hangs on a thin silver chain.  As the sand runs from one bulb to the other, it turns from black to white.{/i}\n\nFirst imagined by skilled temple raiders devoted to Olidammara, the god of rogues, chronocharms of the laughing rogue have found their way into the toolboxes of thieves of all stripes. When you activate this chronocharm, you can immediately reroll a single Disable Device check that you just attempted.  You can activate this item after the success or failure of the first roll has been determined (even if your failure resulted in accidentally setting off a trap), but before any ramifications of that roll have been applied. The result of the second roll replaces the first result.\n\nThis ability functions once per day.\n\n{b}Construction{/b}\n{b}Requirements{/b} Craft Wondrous Item, {i}haste{/i}; {b}Cost{/b} 250 gp\n\n{b}Chronocharm{/b}\nA chronocharm occupies the neck body slot, but it c be worn simutaneously with any number of other chronocharms, which all function normally.  However, you can&apos;t wear more than one of the same chronocharm.\n\nYou must wear a chronocharm for 24 hours before you can access its abilities.  If it is taken off, it becomes inactive until worn for an additional 24 hours.\n\n{b}Source:{/b} Magic Item Compendium, pg 86" compset="Wondrous" summary="Reroll a failed disable device check 1/day">
+    <fieldval field="gCost" value="500"/>
+    <fieldval field="iCL" value="5"/>
+    <fieldval field="trkMax" value="1"/>
+    <fieldval field="shortname" value="Chronocharm: Laughing Rogue"/>
+    <usesource source="srcMIC" parent="UserParent" name="Magic Item Compendium"/>
+    <tag group="Hero" tag="EqpNeck" name="Neck" abbrev="Neck"/>
+    <tag group="Helper" tag="EquipAvail"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="abAction" tag="Immediate"/>
+    <tag group="Usage" tag="Day"/>
+    <tag group="gType" tag="Wonder" name="Wondrous Item" abbrev="Wonder"/>
+    <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="Helper" tag="EquipMag" name="EquipMag" abbrev="EquipMag"/>
+    <tag group="iSchool" tag="Transmutat" name="Transmutation" abbrev="Trans"/>
+    <tag group="User" tag="Tracker"/>
+    </thing>
+  <thing id="ioCCUncAmg" name="Chronocharm of the Uncaring Archmage" description="{i}A bloodstone eye stares forth from this pentagonal trinket.{/i}\n\nA chronocharm of the uncaring archmage alters your perception of time, allowing you to cast a single spell more quickly.  When it is activated, the next spell of 3rd level or lower you cast that has a casting time of 1 full round can be cast as a standard action instead.  If you don&apos;t cast such a spell by the end of your turn, the effect fades.\n\nThis ability functions once per day.\n\n{b}Construction{/b}\n{b}Requirements{/b} Craft Wondrous Item, Quicken Spell; {b}Cost{/b} 250 gp\n\n{b}Chronocharm{/b}\nA chronocharm occupies the neck body slot, but it c be worn simutaneously with any number of other chronocharms, which all function normally.  However, you can&apos;t wear more than one of the same chronocharm.\n\nYou must wear a chronocharm for 24 hours before you can access its abilities.  If it is taken off, it becomes inactive until worn for an additional 24 hours.\n\n{b}Source:{/b} Magic Item Compendium, pg 86" compset="Wondrous" summary="Cast full-round spell (SL3 or lower) as standard action, 1/day">
+    <fieldval field="gCost" value="500"/>
+    <fieldval field="iCL" value="5"/>
+    <fieldval field="trkMax" value="1"/>
+    <fieldval field="shortname" value="Chronocharm: Uncaring Archmage"/>
+    <usesource source="srcMIC" parent="UserParent" name="Magic Item Compendium"/>
+    <tag group="Hero" tag="EqpNeck" name="Neck" abbrev="Neck"/>
+    <tag group="Helper" tag="EquipAvail"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="Usage" tag="Day"/>
+    <tag group="gType" tag="Wonder" name="Wondrous Item" abbrev="Wonder"/>
+    <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="Helper" tag="EquipMag" name="EquipMag" abbrev="EquipMag"/>
+    <tag group="iSchool" tag="Transmutat" name="Transmutation" abbrev="Trans"/>
+    <tag group="User" tag="Tracker"/>
+    <tag group="abAction" tag="Swift"/>
+    </thing>
+  <thing id="ioACIrWDi2" name="Iron Ward Diamond, Lesser" description="An iron ward diamond lends its toughness to armor, helping it absorb blows in combt.\n\nLesser:\nAs the least crystal, except that it grants damage reduction 3/- until it has prevented a total of 30 points of damage.  A lesser iron ward diamond functions only when attached to medium or heavy armor.\n\n{b}Iron Ward Diamond, Least{/b}\nThe least version of this augment crystal grants you damage reduction 1/-.  This damage reduction stacks with similar damage reduction grnted by any other source.  Once the clasp has prevented a total of 10 points of damage, it becomes inert until the following day.\n\n{b}Construction{/b}\n{b}Requirements{/b} Craft Magic Arms and Armor, {i}stoneskin{/i}; {b}Cost{/b} 1,000 gp\n\n{b}Source:{/b} Magic Item Compendium, pg 26" compset="Wondrous" summary="Grants DR 3/- , 30 pts/day">
+    <fieldval field="gCost" value="2000"/>
+    <fieldval field="iCL" value="6"/>
+    <fieldval field="trkMax" value="30"/>
+    <usesource source="srcMIC"/>
+    <tag group="Helper" tag="EquipAvail" name="EquipAvail" abbrev="EquipAvail"/>
+    <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
+    <tag group="iSchool" tag="Evocation"/>
+    <tag group="Helper" tag="EquipMag"/>
+    <tag group="User" tag="Tracker"/>
+    <tag group="SpecGroup" tag="FireRelate" name="Firearm Related Classes, Archetypes &amp; Feats" abbrev="Firearm Related Classes, Archetypes &amp; Feats"/>
+    <tag group="Usage" tag="HPDay"/>
+    <tag group="gType" tag="Wonder" name="Wondrous Item" abbrev="Wonder"/>
+    </thing>
+  <thing id="ioBtBigStp" name="Boots of Big Stepping" description="{i}These wolfhide boots are secured with leather thongs that wrap twice about the ankle.  The fure is exceptionally soft and has a faint sheen that makes the boots appear to shimmer in the light.{/i}\n\nThe spirit of a blink dog has been harnessed within these boots.  While you are wearing these boots, your caster level for all teleportation spells is increased by 2.  This is a continuous effect and requires no activation.\n\nIn addition, when you speak the command word, you can teleport up to 60 feet with no chance for error, as if using a greater teleport spell.  This ability functions three times per day.\n\n{b}Construction{/b}\n{b}Requirements{/b}: Craft Wondrous Item, {i}dimension door{/i}, {b}Cost{/b} 3,000 gp\n\n{b}Source:{/b} Magic Item Compendium, pg 76" compset="Wondrous" summary="+2 Caster level for teleportation spells, teleport 60 ft without error 3/day">
+    <fieldval field="gCost" value="6000"/>
+    <fieldval field="iCL" value="7"/>
+    <fieldval field="gWeight" value="2"/>
+    <fieldval field="trkMax" value="3"/>
+    <usesource source="srcMIC"/>
+    <tag group="iSchool" tag="Conjur" name="Conjuration" abbrev="Conjur"/>
+    <tag group="Helper" tag="EquipAvail" name="EquipAvail" abbrev="EquipAvail"/>
+    <tag group="Helper" tag="EquipMag" name="EquipMag" abbrev="EquipMag"/>
+    <tag group="Helper" tag="StatComGr" name="Statblock: Combat Gear" abbrev="Statblock: Combat Gear"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="abAction" tag="Standard"/>
+    <tag group="Hero" tag="EqpFoot" name="Feet" abbrev="Feet"/>
+    <tag group="Usage" tag="Day"/>
+    <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="gType" tag="Wonder" name="Wondrous Item" abbrev="Wonder"/>
+    </thing>
+  <thing id="ioDispCord" name="Dispelling Cord" description="{i}The end of this long silken cord is tied with five different knots.{/i}\n\nA dispelling cord is worn wrapped loosely around your chest, its two ends slung over your shoulder.  When you activate a dispelling cord, you gain a +2 competence bonus on ny dispel checks you make until the end of your turn.\n\nA dispelling cord functions five times per day.  Each time it is activated, one of the five knots magically unties itself, indicating the uses remaining for the day.\n\n{b}Lore:{/b}\nThe first dispelling cords were created by an ancient king who wanted to prevent his enemies from having magical dominion over his army.  To ensure magical supremacy, the king ordered his mages into battle armed with dispelling cords.  (Knowledge [history] DC 15)\n\n{b}Construction{/b}\n{b}Requirements{/b}: Craft Wondrous Item, {i}dispel magic{/i}; {b}Cost{/b} 500 gp\n\n{b}Source:{/b} Magic Item Compendium, pg 94" compset="Wondrous" summary="+2 Competence to dispel checks 5/day">
+    <fieldval field="gWeight" value="1"/>
+    <fieldval field="gCost" value="1000"/>
+    <fieldval field="iCL" value="8"/>
+    <fieldval field="trkMax" value="5"/>
+    <usesource source="srcMIC"/>
+    <tag group="gType" tag="Wonder" name="Wondrous Item" abbrev="Wonder"/>
+    <tag group="iSchool" tag="Abjur"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="Helper" tag="EquipAvail"/>
+    <tag group="User" tag="Tracker"/>
+    <tag group="Helper" tag="EquipMag" name="EquipMag" abbrev="EquipMag"/>
+    <tag group="Usage" tag="Day"/>
+    <tag group="Helper" tag="NoPathSoc"/>
+    <tag group="Hero" tag="EqpTorso"/>
+    </thing>
+ </document>
