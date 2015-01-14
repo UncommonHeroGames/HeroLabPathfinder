@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document signature="Hero Lab Data">
+  <thing id="pAdjHrcInv" name="Heroic Invocation" description="Using worlds of ancient power, you bestow heroic powers on all creatures subject to this spell. They gain a +4 morale bonus on attack and damage rolls, gain 2d8+4 temporary hit points, and become immune to both fear and charm effects for the spell’s duration. At the end of the spell’s duration, the subjects become fatigued.\n\n{B}Note:{/b} Use the counter to set the number of temporary hit points and as you take damage lower the counter to show losing the temporary hit points first." compset="InPlay" summary="+4 morale to attk/dmg, immune to charm/fear, 2d8+4 temp HP">
+    <fieldval field="pDuration" value="10 minutes/level"/>
+    <fieldval field="pMinimum" value="0"/>
+    <fieldval field="pMaximum" value="20"/>
+    <fieldval field="pWhat" value="(Temp HP)"/>
+    <tag group="Helper" tag="AdjSpell"/>
+    <tag group="Helper" tag="AdjInfo"/>
+    <eval phase="PreLevel" priority="10000"><![CDATA[
+      ~ If we're not enabled, get out now
+      doneif (field[pIsOn].value = 0)
+
+      ~ Add to our attack and damage bonuses
+      #applybonus[BonMorale, hero.child[Attack], field[pAdjust].value]
+      #applybonus[BonMorale, hero.child[Damage], field[pAdjust].value]
+
+      ~ Give Bonus HP
+      herofield[tBonusHP].value += field[pAdjust].value]]></eval>
+    </thing>
+  </document>

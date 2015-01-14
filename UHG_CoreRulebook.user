@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <document signature="Hero Lab Data">
-  <!--
-  ============================================================================
-     Spell Adjustments (Not supported in official PF HL files)
-  ============================================================================
-  -->
   <thing id="pAdjFmDrg1" name="Form of the Dragon I" description="You become a Medium chromatic or metallic dragon. You gain a +4 size bonus to Strength, a +2 size bonus to Constitution, a +4 natural armor bonus, fly 60 feet (poor), darkvision 60 feet, a breath weapon, and resistance to one element. You also gain one bite (1d8), two claws (1d6), and two wing attacks (1d4). Your breath weapon and resistance depend on the type of dragon. You can only use the breath weapon once per casting of this spell. All breath weapons deal 6d8 points of damage and allow a Reflex save for half damage. In addition, some of the dragon types grant additional abilities, as noted below.\n\nBlack dragon: 60-foot line of acid, resist acid 20, swim 60 feet\n\nBlue dragon: 60-foot line of electricity, resist electricity 20, burrow 20 feet\n\nGreen dragon: 30-foot cone of acid, resist acid 20, swim 40 feet\n\nRed dragon: 30-foot cone of fire, resist fire 30, vulnerability to cold\n\nWhite dragon: 30-foot cone of cold, resist cold 20, swim 60 feet, vulnerability to fire\n\nBrass dragon: 60-foot line of fire, resist fire 20, burrow 30 feet, vulnerability to cold\n\nBronze dragon: 60-foot line of electricity, resist electricity 20, swim 60 feet\n\nCopper dragon: 60-foot line of acid, resist acid 20, spider climb (always active)\n\nGold dragon: 30-foot cone of fire, resist fire 20, swim 60 feet\n\nSilver dragon: 30-foot cone of cold, resist cold 30, vulnerability to fire" compset="InPlay" summary="Become a medium dragon" uniqueness="useronce">
     <fieldval field="pMinimum" value="4"/>
     <fieldval field="pMaximum" value="4"/>
@@ -19,37 +14,43 @@
 
       #enhancementbonus[hero.child[aSTR], field[pAdjust].value]]]></eval>
     </thing>
-  <thing id="pAdjContin" name="Contingency" description="You can place another spell upon your person so that it comes into effect under some condition you dictate when casting contingency. The contingency spell and the companion spell are cast at the same time. The 10-minute casting time is the minimum total for both castings; if the companion spell has a casting time longer than 10 minutes, use that instead. You must pay any costs associated with the companion spell when you cast contingency.\n\nThe spell to be brought into effect by the contingency must be one that affects your person and be of a spell level no higher than one-third your caster level (rounded down, maximum 6th level). The conditions needed to bring the spell into effect must be clear, although they can be general. In all cases, the contingency immediately brings into effect the companion spell, the latter being &quot;cast&quot; instantaneously when the prescribed circumstances occur. If complicated or convoluted conditions are prescribed, the whole spell combination (contingency and the companion magic) may fail when triggered. The companion spell occurs based solely on the stated conditions, regardless of whether you want it to. You can use only one contingency spell at a time; if a second is cast, the first one (if still active) is dispelled." compset="InPlay" summary="A contingent spell waiting for a trigger">
+  <thing id="pAdjContin" name="Contingency" description="You can place another spell upon your person so that it comes into effect under some condition you dictate when casting contingency. The contingency spell and the companion spell are cast at the same time. The 10-minute casting time is the minimum total for both castings; if the companion spell has a casting time longer than 10 minutes, use that instead. You must pay any costs associated with the companion spell when you cast contingency.\n\nThe spell to be brought into effect by the contingency must be one that affects your person and be of a spell level no higher than one-third your caster level (rounded down, maximum 6th level). The conditions needed to bring the spell into effect must be clear, although they can be general. In all cases, the contingency immediately brings into effect the companion spell, the latter being &quot;cast&quot; instantaneously when the prescribed circumstances occur. If complicated or convoluted conditions are prescribed, the whole spell combination (contingency and the companion magic) may fail when triggered. The companion spell occurs based solely on the stated conditions, regardless of whether you want it to. You can use only one contingency spell at a time; if a second is cast, the first one (if still active) is dispelled.\n\n{b}Note:{/b}\nType the spell name/condition into the source field, and it will show up on the In-Play page." compset="InPlay" summary="A contingent spell waiting for a trigger">
     <fieldval field="pDuration" value="1 day/level (D) or until discharged"/>
     <tag group="Helper" tag="NoIncr"/>
     <tag group="Helper" tag="AdjNoPlus"/>
     <tag group="Helper" tag="AdjSpell" name="Spell Adjustment" abbrev="Spell Adjustment"/>
     <tag group="Helper" tag="AdjInfo"/>
-    <eval phase="Final" priority="10000"><![CDATA[
-      ~ If we're not enabled, get out now
-      doneif (field[pIsOn].value = 0)
+    <bootstrap thing="cAjContHlp"></bootstrap>
+    <eval phase="Render" priority="999999999" index="2"><![CDATA[~ If the default "Source" id is changed then attempt to use it.
+If (compare(field[pSource].text,"(source)") <> 0) Then
+  ~ Make sure that we are not blank either.
+  If (compare(field[pSource].text,"") <> 0) Then
+    hero.child[cAjContHlp].field[livename].text = "Contingency - " & field[pSource].text
+  Else
+    hero.child[cAjContHlp].field[livename].text = "Contingency"
+  Endif
+Else
+  hero.child[cAjContHlp].field[livename].text = "Contingency"
+Endif]]></eval>
+    <eval phase="Final"><![CDATA[~ If we're enabled...
+If (field[pIsOn].value <> 1) Then
 
-      ~ Give Bonus HP
-      herofield[tCurrentHP].value += field[pAdjust].value
+  ~ Remove 'Tracker' tag
+  perform hero.child[cAjContHlp].delete[User.Tracker]
 
-      #situational[hero.child[svAll],"+1 morale bonus vs. fear",field[thingname].text]]]></eval>
-    <eval phase="PreLevel" priority="10000" index="2"><![CDATA[
-      ~ If we're not enabled, get out now
-      doneif (field[pIsOn].value = 0)
+Else
 
-      ~ Give a MORALE bonus to hit to all weapons
-      #applybonus[BonMorale,hero.child[Attack],1]]]></eval>
+  ~ Add 'Uses' tag
+  perform hero.child[cAjContHlp].assign[Helper.UsesQty]
+
+  ~ Add 'Tracker' tag
+  perform hero.child[cAjContHlp].assign[User.Tracker]
+
+  ~ Set tracker amount
+  hero.child[cAjContHlp].field[trkMax].value = 1
+  
+Endif]]></eval>
     </thing>
-  <!--
-  ============================================================================
-     Ability Adjustments (Not supported in official PF HL files)
-  ============================================================================
-  -->
-  <!--
-  ============================================================================
-     Utility Adjustments (PF System, but not a part of PF Content)
-  ============================================================================
-  -->
   <thing id="pAdjXtrSlt" name="Extra Item Slots" description="Additional slots" compset="InPlay">
     <fieldval field="pMinimum" value="0"/>
     <fieldval field="pCandExpr" value="ExtraSlot.?"/>
@@ -157,9 +158,8 @@ elseif (focus.tagis[ExtraSlot.EqpBrainCy] <> 0) then
     next
 endif]]></eval>
     </thing>
-  <!--
-  ============================================================================
-     Unsorted (New entries created by the editor will go after this line)
-  ============================================================================
-  -->
-</document>
+  <thing id="cAjContHlp" name="Contingency Adjustment Helper" description="You can place another spell upon your person so that it comes into effect under some condition you dictate when casting contingency. The contingency spell and the companion spell are cast at the same time. The 10-minute casting time is the minimum total for both castings; if the companion spell has a casting time longer than 10 minutes, use that instead. You must pay any costs associated with the companion spell when you cast contingency.\n\nThe spell to be brought into effect by the contingency must be one that affects your person and be of a spell level no higher than one-third your caster level (rounded down, maximum 6th level). The conditions needed to bring the spell into effect must be clear, although they can be general. In all cases, the contingency immediately brings into effect the companion spell, the latter being &quot;cast&quot; instantaneously when the prescribed circumstances occur. If complicated or convoluted conditions are prescribed, the whole spell combination (contingency and the companion magic) may fail when triggered. The companion spell occurs based solely on the stated conditions, regardless of whether you want it to. You can use only one contingency spell at a time; if a second is cast, the first one (if still active) is dispelled.\n\n{b}Note:{/b}\nType the spell name/condition into the source field on the Adjust page, and it will show up here." compset="ClSpecial">
+    <comment>This is just a target for adding a tracker for the Contingency spell adjustment (pAdjContin).</comment>
+    <tag group="Helper" tag="SpecUp"/>
+    </thing>
+  </document>
