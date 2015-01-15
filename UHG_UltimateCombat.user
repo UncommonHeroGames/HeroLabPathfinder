@@ -12,8 +12,8 @@
       doneif (field[pIsOn].value = 0)
 
       ~ Add to our attack and damage bonuses
-      #applybonus[BonMorale, hero.child[Attack], field[pAdjust].value]
-      #applybonus[BonMorale, hero.child[Damage], field[pAdjust].value]
+      #applybonus[BonMorale, hero.child[Attack], 4]
+      #applybonus[BonMorale, hero.child[Damage], 4]
 
       ~ Give Bonus HP
       herofield[tBonusHP].value += field[pAdjust].value]]></eval>
