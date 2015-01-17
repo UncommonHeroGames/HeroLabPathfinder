@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document signature="Hero Lab Data">
+  <thing id="tmDire" name="Dire" description="Dire creatures are large, feral-looking animals. They are not just bigger versions of normal animals, however. On the whole, dire creatures are bigger, stronger, faster, and more aggressive than their normal counterparts." compset="Template" uniqueness="unique">
+    <fieldval field="tmWIS" value="4"/>
+    <fieldval field="tmCHA" value="4"/>
+    <fieldval field="tmAC" value="5"/>
+    <fieldval field="tmSTR" value="8"/>
+    <fieldval field="tmDEX" value="2"/>
+    <fieldval field="tmCON" value="8"/>
+    <fieldval field="tmTmSklPls" value="2"/>
+    <fieldval field="tmSizeMod" value="1"/>
+    <arrayval field="tmCRArray" index="0" value="2"/>
+    <tag group="ClVaryName" tag="Prepend"/>
+    <tag group="TemplHelp" tag="Acquired" name="Acquired" abbrev="Acquired"/>
+    <tag group="TemplHelp" tag="AddHitDice"/>
+    <eval phase="PostLevel" priority="10000"><![CDATA[debug herofield[tSize].value
+debug herofield[tHitDice].value
+debug hero.findchild[BaseRace].field[rHDSides].value
+var hMod as number
+if (herofield[tSize].value - 1 < 0) then
+  hMod=1
+  herofield[tHitDice].value += 1
+elseif (herofield[tSize].value - 1= 0) then
+  hMod=2
+  herofield[tHitDice].value += 3
+else 
+  hMod=herofield[tHitDice].value
+  herofield[tHitDice].value = herofield[tHitDice].value * 2
+endif
+
+field[tmHitDice].value=3
+field[tmHDSides].value=hero.findchild[BaseRace].field[rHDSides].value
+hero.child[Speed].field[Bonus].value +=10]]></eval>
+    </thing>
+  </document>
