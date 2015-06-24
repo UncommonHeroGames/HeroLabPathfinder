@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <document signature="Hero Lab Data">
   <thing id="pAdjFmDrg1" name="Form of the Dragon I" description="You become a Medium chromatic or metallic dragon. You gain a +4 size bonus to Strength, a +2 size bonus to Constitution, a +4 natural armor bonus, fly 60 feet (poor), darkvision 60 feet, a breath weapon, and resistance to one element. You also gain one bite (1d8), two claws (1d6), and two wing attacks (1d4). Your breath weapon and resistance depend on the type of dragon. You can only use the breath weapon once per casting of this spell. All breath weapons deal 6d8 points of damage and allow a Reflex save for half damage. In addition, some of the dragon types grant additional abilities, as noted below.\n\nBlack dragon: 60-foot line of acid, resist acid 20, swim 60 feet\n\nBlue dragon: 60-foot line of electricity, resist electricity 20, burrow 20 feet\n\nGreen dragon: 30-foot cone of acid, resist acid 20, swim 40 feet\n\nRed dragon: 30-foot cone of fire, resist fire 30, vulnerability to cold\n\nWhite dragon: 30-foot cone of cold, resist cold 20, swim 60 feet, vulnerability to fire\n\nBrass dragon: 60-foot line of fire, resist fire 20, burrow 30 feet, vulnerability to cold\n\nBronze dragon: 60-foot line of electricity, resist electricity 20, swim 60 feet\n\nCopper dragon: 60-foot line of acid, resist acid 20, spider climb (always active)\n\nGold dragon: 30-foot cone of fire, resist fire 20, swim 60 feet\n\nSilver dragon: 30-foot cone of cold, resist cold 30, vulnerability to fire" compset="InPlay" summary="Become a medium dragon" uniqueness="useronce">
     <fieldval field="pMinimum" value="4"/>
@@ -161,5 +161,53 @@ endif]]></eval>
   <thing id="cAjContHlp" name="Contingency Adjustment Helper" description="You can place another spell upon your person so that it comes into effect under some condition you dictate when casting contingency. The contingency spell and the companion spell are cast at the same time. The 10-minute casting time is the minimum total for both castings; if the companion spell has a casting time longer than 10 minutes, use that instead. You must pay any costs associated with the companion spell when you cast contingency.\n\nThe spell to be brought into effect by the contingency must be one that affects your person and be of a spell level no higher than one-third your caster level (rounded down, maximum 6th level). The conditions needed to bring the spell into effect must be clear, although they can be general. In all cases, the contingency immediately brings into effect the companion spell, the latter being &quot;cast&quot; instantaneously when the prescribed circumstances occur. If complicated or convoluted conditions are prescribed, the whole spell combination (contingency and the companion magic) may fail when triggered. The companion spell occurs based solely on the stated conditions, regardless of whether you want it to. You can use only one contingency spell at a time; if a second is cast, the first one (if still active) is dispelled.\n\n{b}Note:{/b}\nType the spell name/condition into the source field on the Adjust page, and it will show up here." compset="ClSpecial">
     <comment>This is just a target for adding a tracker for the Contingency spell adjustment (pAdjContin).</comment>
     <tag group="Helper" tag="SpecUp"/>
+    </thing>
+  <thing id="wSpirWCha" name="Spiritual Weapon (Charisma)" description="Spiritual Weapon\nSchool: evocation [force]\nLevel: cleric/oracle 2\nCasting Time: 1 standard action\nComponents: V, S, DF\nRange: medium (100 ft. + 10 ft./level)\nEffect: magic weapon of force\nDuration: 1 round/level (D)\nSaving Throw: none\nSpell Resistance: yes\n\nA weapon made of force appears and attacks foes at a distance, as you direct it, dealing 1d8 force damage per hit, + 1 point per three caster levels (maximum +5 at 15th level). The weapon takes the shape of a weapon favored by your deity or a weapon with some spiritual significance or symbolism to you (see below) and has the same threat range and critical multipliers as a real weapon of its form. It strikes the opponent you designate, starting with one attack in the round the spell is cast and continuing each round thereafter on your turn. It uses your base attack bonus (possibly allowing it multiple attacks per round in subsequent rounds) plus your Wisdom modifier as its attack bonus. It strikes as a spell, not as a weapon, so for example, it can damage creatures that have damage reduction. As a force effect, it can strike incorporeal creatures without the reduction in damage associated with incorporeality. The weapon always strikes from your direction. It does not get a flanking bonus or help a combatant get one. Your feats or combat actions do not affect the weapon. If the weapon goes beyond the spell range, if it goes out of your sight, or if you are not directing it, the weapon returns to you and hovers.\n\nEach round after the first, you can use a move action to redirect the weapon to a new target. If you do not, the weapon continues to attack the previous round&apos;s target. On any round that the weapon switches targets, it gets one attack. Subsequent rounds of attacking that target allow the weapon to make multiple attacks if your base attack bonus would allow it to. Even if the spiritual weapon is a ranged weapon, use the spell&apos;s range, not the weapon&apos;s normal range increment, and switching targets still is a move action.\n\nA spiritual weapon cannot be attacked or harmed by physical attacks, but dispel magic, disintegrate, a sphere of annihilation, or a rod of cancellation affects it. A spiritual weapon&apos;s AC against touch attacks is 12 (10 + size bonus for Tiny object).\n\nIf an attacked creature has spell resistance, you make a caster level check (1d20 + caster level) against that spell resistance the first time the spiritual weapon strikes it. If the weapon is successfully resisted, the spell is dispelled. If not, the weapon has its normal full effect on that creature for the duration of the spell.\n\nThe weapon that you get is often a force replica of your deity&apos;s own personal weapon. A cleric without a deity gets a weapon based on his alignment. A neutral cleric without a deity can create a spiritual weapon of any alignment, provided he is acting at least generally in accord with that alignment at the time. The weapons associated with each alignment are as follows: chaos (battleaxe), evil (light flail), good (warhammer), law (longsword)." compset="Weapon">
+    <tag group="wCategory" tag="Melee" name="Melee Weapon" abbrev="Melee"/>
+    <tag group="wCritMin" tag="20" name="20" abbrev="20"/>
+    <tag group="wCritMult" tag="2" name="2" abbrev="2"/>
+    <tag group="wFtrGroup" tag="Flails" name="Flails" abbrev="Flails"/>
+    <tag group="wMain" tag="1d8" name="1d8" abbrev="1d8"/>
+    <tag group="Helper" tag="Proficient"/>
+    <tag group="Helper" tag="NoSelect"/>
+    <tag group="wType" tag="Force"/>
+    <tag group="wMaxStrBon" tag="0"/>
+    <tag group="wMaxStrPen" tag="0"/>
+    <eval phase="UserPostAt" index="999">~ Swap strength state for casting stat (CHA) to attack
+var atkMod as number
+atkMod  = hero.child[aCHA].field[aModBonus].value
+atkMod -= hero.child[aSTR].field[aModBonus].value
+this.field[wAttack].value += atkMod
+
+~ Add damage bonus of 1 per three caster levels, max +5
+var dmgMod as number
+dmgMod = (hero.tagcount[Hero.Caster])/3
+dmgMod = round(dmgMod,0,-1)
+dmgMod = minimum(dmgMod,5)
+this.field[wDamBonus].value += dmgMod</eval>
+    </thing>
+  <thing id="wSpirWWis" name="Spiritual Weapon (Wisdom)" description="Spiritual Weapon\nSchool: evocation [force]\nLevel: cleric/oracle 2\nCasting Time: 1 standard action\nComponents: V, S, DF\nRange: medium (100 ft. + 10 ft./level)\nEffect: magic weapon of force\nDuration: 1 round/level (D)\nSaving Throw: none\nSpell Resistance: yes\n\nA weapon made of force appears and attacks foes at a distance, as you direct it, dealing 1d8 force damage per hit, + 1 point per three caster levels (maximum +5 at 15th level). The weapon takes the shape of a weapon favored by your deity or a weapon with some spiritual significance or symbolism to you (see below) and has the same threat range and critical multipliers as a real weapon of its form. It strikes the opponent you designate, starting with one attack in the round the spell is cast and continuing each round thereafter on your turn. It uses your base attack bonus (possibly allowing it multiple attacks per round in subsequent rounds) plus your Wisdom modifier as its attack bonus. It strikes as a spell, not as a weapon, so for example, it can damage creatures that have damage reduction. As a force effect, it can strike incorporeal creatures without the reduction in damage associated with incorporeality. The weapon always strikes from your direction. It does not get a flanking bonus or help a combatant get one. Your feats or combat actions do not affect the weapon. If the weapon goes beyond the spell range, if it goes out of your sight, or if you are not directing it, the weapon returns to you and hovers.\n\nEach round after the first, you can use a move action to redirect the weapon to a new target. If you do not, the weapon continues to attack the previous round&apos;s target. On any round that the weapon switches targets, it gets one attack. Subsequent rounds of attacking that target allow the weapon to make multiple attacks if your base attack bonus would allow it to. Even if the spiritual weapon is a ranged weapon, use the spell&apos;s range, not the weapon&apos;s normal range increment, and switching targets still is a move action.\n\nA spiritual weapon cannot be attacked or harmed by physical attacks, but dispel magic, disintegrate, a sphere of annihilation, or a rod of cancellation affects it. A spiritual weapon&apos;s AC against touch attacks is 12 (10 + size bonus for Tiny object).\n\nIf an attacked creature has spell resistance, you make a caster level check (1d20 + caster level) against that spell resistance the first time the spiritual weapon strikes it. If the weapon is successfully resisted, the spell is dispelled. If not, the weapon has its normal full effect on that creature for the duration of the spell.\n\nThe weapon that you get is often a force replica of your deity&apos;s own personal weapon. A cleric without a deity gets a weapon based on his alignment. A neutral cleric without a deity can create a spiritual weapon of any alignment, provided he is acting at least generally in accord with that alignment at the time. The weapons associated with each alignment are as follows: chaos (battleaxe), evil (light flail), good (warhammer), law (longsword)." compset="Weapon">
+    <tag group="Helper" tag="NoSelect" name="NoSelect" abbrev="NoSelect"/>
+    <tag group="Helper" tag="Proficient" name="Proficient" abbrev="Proficient"/>
+    <tag group="wCategory" tag="Melee" name="Melee Weapon" abbrev="Melee"/>
+    <tag group="wCritMin" tag="20" name="20" abbrev="20"/>
+    <tag group="wCritMult" tag="2" name="2" abbrev="2"/>
+    <tag group="wFtrGroup" tag="Flails" name="Flails" abbrev="Flails"/>
+    <tag group="wMain" tag="1d8" name="1d8" abbrev="1d8"/>
+    <tag group="wMaxStrBon" tag="0" name="0" abbrev="0"/>
+    <tag group="wMaxStrPen" tag="0" name="0" abbrev="0"/>
+    <tag group="wType" tag="Force" name="Force" abbrev="Force"/>
+    <eval phase="UserPostAt" index="999">~ Swap strength state for casting stat (WIS) to attack
+var atkMod as number
+atkMod  = hero.child[aWIS].field[aModBonus].value
+atkMod -= hero.child[aSTR].field[aModBonus].value
+this.field[wAttack].value += atkMod
+
+~ Add damage bonus of 1 per three caster levels, max +5
+var dmgMod as number
+dmgMod = (hero.tagcount[Hero.Caster])/3
+dmgMod = round(dmgMod,0,-1)
+dmgMod = minimum(dmgMod,5)
+this.field[wDamBonus].value += dmgMod</eval>
     </thing>
   </document>
