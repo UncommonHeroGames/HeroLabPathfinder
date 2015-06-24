@@ -10,13 +10,10 @@
     <fieldval field="tmTmSklPls" value="2"/>
     <fieldval field="tmSizeMod" value="1"/>
     <arrayval field="tmCRArray" index="0" value="2"/>
-    <tag group="ClVaryName" tag="Prepend"/>
     <tag group="TemplHelp" tag="Acquired" name="Acquired" abbrev="Acquired"/>
     <tag group="TemplHelp" tag="AddHitDice"/>
-    <eval phase="PostLevel" priority="10000"><![CDATA[debug herofield[tSize].value
-debug herofield[tHitDice].value
-debug hero.findchild[BaseRace].field[rHDSides].value
-var hMod as number
+    <tag group="ClVaryName" tag="Prepend"/>
+    <eval phase="PostLevel" priority="10000"><![CDATA[var hMod as number
 if (herofield[tSize].value - 1 < 0) then
   hMod=1
   herofield[tHitDice].value += 1
@@ -31,5 +28,159 @@ endif
 field[tmHitDice].value=3
 field[tmHDSides].value=hero.findchild[BaseRace].field[rHDSides].value
 hero.child[Speed].field[Bonus].value +=10]]></eval>
+    </thing>
+  <thing id="tmVeta" name="Vampire, Vetala" description="While most of the Inner Sea&apos;s vampires lust for living blood, the mysterious vetalas hunger for a more intangible force: the energy that infuses mortal minds. Referred to as consciousness or psyche by some, the academics of Vudra - from where most vetalas hail - call this fundamental vital force prana. Regardless of their desire&apos;s name, vetalas prey upon those who show creative promise, possess potent force of will, or seem destined for greatness, draining the most brilliant sources of mortal light to fuel their own unnatural embers. Their dark mastery of life force allows vetalas to possess corpses or even overwhelm the minds of living creatures. With these stolen masks and the resources of abducted lives, they work their foul wills.\n\nVetalas are said to be the spirits of children &quot;born evil,&quot; who never received burial rites upon their deaths. Sometimes one of these evil spirits takes hold of a corpse - not necessarily its own - which becomes its anchor to the mortal world. Such young souls seek out experiences and life energy, becoming as wicked as any other vampire as they endlessly indulge their profane, deathless desires." compset="Template" uniqueness="unique">
+    <fieldval field="tmReplRaHD" value="8"/>
+    <fieldval field="tmSTR" value="4"/>
+    <fieldval field="tmDEX" value="2"/>
+    <fieldval field="tmINT" value="4"/>
+    <fieldval field="tmWIS" value="2"/>
+    <fieldval field="tmCHA" value="6"/>
+    <fieldval field="tmAC" value="4"/>
+    <arrayval field="tmCRArray" index="0" value="2"/>
+    <tag group="AlgnReq" tag="Evil" name="Any Evil" abbrev="Any Evil"/>
+    <tag group="ClVaryName" tag="AppNoComma" name="Append (without Comma)" abbrev="Append (without Comma)"/>
+    <tag group="TemplHelp" tag="Acquired" name="Acquired" abbrev="Acquired"/>
+    <tag group="TypeAndAug" tag="tpUndead" name="Undead" abbrev="Undead"/>
+    <bootstrap thing="xChanRes">
+      <autotag group="Value" tag="4"/>
+      </bootstrap>
+    <bootstrap thing="xDamRdGood">
+      <autotag group="Value" tag="10"/>
+      </bootstrap>
+    <bootstrap thing="xDamRdMag">
+      <autotag group="Value" tag="10"/>
+      </bootstrap>
+    <bootstrap thing="raDarkVis">
+      <autotag group="Value" tag="60"/>
+      </bootstrap>
+    <bootstrap thing="xFastHeal">
+      <autotag group="Value" tag="5"/>
+      </bootstrap>
+    <bootstrap thing="typUndead"></bootstrap>
+    <bootstrap thing="fAlertness">
+      <autotag group="thing" tag="skipprereq"/>
+      </bootstrap>
+    <bootstrap thing="fBlindFgt">
+      <autotag group="thing" tag="skipprereq"/>
+      </bootstrap>
+    <bootstrap thing="fDeceit">
+      <autotag group="thing" tag="skipprereq"/>
+      </bootstrap>
+    <bootstrap thing="fImpInit">
+      <autotag group="thing" tag="skipprereq"/>
+      </bootstrap>
+    <bootstrap thing="fSkillFoc">
+      <autotag group="thing" tag="skipprereq"/>
+      <autotag group="Target" tag="skDisguise"/>
+      </bootstrap>
+    <bootstrap thing="raVetDrain"></bootstrap>
+    <bootstrap thing="raVetMalev"></bootstrap>
+    <bootstrap thing="raVetParal"></bootstrap>
+    <bootstrap thing="raVetPCorp"></bootstrap>
+    <bootstrap thing="xClimb">
+      <autotag group="Value" tag="1"/>
+      </bootstrap>
+    <bootstrap thing="raVetaWeak"></bootstrap>
+    <bootstrap thing="wClaw">
+      <autotag group="Value" tag="2"/>
+      <autotag group="wMain" tag="1d6_5"/>
+      </bootstrap>
+    <eval phase="PreLevel" priority="4000" index="2">#racialbonus[skDisguise] += 8
+#racialbonus[skPercep] += 8
+#racialbonus[skSenseMot] += 8
+#racialbonus[skStealth] += 8
+
+#applyresist[xDamRsElec, 10]
+#applyresist[xDamRsFire, 10]</eval>
+    <eval phase="Final" priority="14000">hero.child[xClimb].field[abValue].value = maximum(hero.child[xClimb].field[abValue].value, hero.child[Speed].field[tSpeed].value)</eval>
+    <eval phase="First" priority="600" index="3"><![CDATA[
+      field[livename].text = "Vetala"]]>
+      <before name="Template Name Modification"/>
+      </eval>
+    </thing>
+  <thing id="tmDrVamp" name="Dread Vampire" description="Vampires are undead humanoid creatures that feed on the blood of the living. They look much as they did in life, often becoming more attractive, though some have a hardened, feral look instead." compset="Template" uniqueness="unique">
+    <fieldval field="tmInfHD" value="All racial HD become d8s"/>
+    <fieldval field="tmReplRaHD" value="8"/>
+    <fieldval field="tmSTR" value="8"/>
+    <fieldval field="tmDEX" value="6"/>
+    <fieldval field="tmWIS" value="4"/>
+    <fieldval field="tmCHA" value="6"/>
+    <fieldval field="tmAC" value="8"/>
+    <fieldval field="srcPageNum" value="270"/>
+    <fieldval field="tmINT" value="4"/>
+    <arrayval field="tmCRArray" index="0" value="3"/>
+    <usesource source="Best1Free" parent="BestHeader" name="Bestiary Free Content"/>
+    <usesource source="Bestiary1" parent="BestHeader" name="Bestiary"/>
+    <tag group="TemplHelp" tag="Acquired" name="Acquired" abbrev="Acquired"/>
+    <tag group="TypeAndAug" tag="tpUndead" name="Undead" abbrev="Undead"/>
+    <tag group="ClVaryName" tag="AppNoComma" name="Append (without Comma)" abbrev="Append (without Comma)"/>
+    <tag group="AlgnReq" tag="Evil" name="Any Evil" abbrev="Any Evil"/>
+    <bootstrap thing="fLightRef"></bootstrap>
+    <bootstrap thing="raDarkVis">
+      <autotag group="Value" tag="120"/>
+      </bootstrap>
+    <bootstrap thing="xVamBlood"></bootstrap>
+    <bootstrap thing="xVamChild"></bootstrap>
+    <bootstrap thing="xVamDom"></bootstrap>
+    <bootstrap thing="xVamSpawn"></bootstrap>
+    <bootstrap thing="raVampWeak"></bootstrap>
+    <bootstrap thing="raShadowle"></bootstrap>
+    <bootstrap thing="raEnDrain">
+      <autotag group="Helper" tag="DCUseTotHD"/>
+      <assignval field="abValue" value="2"/>
+      </bootstrap>
+    <bootstrap thing="raChangeSh">
+      <assignval field="livename" value="Change Shape (dire bat or wolf, beast shape II)"/>
+      </bootstrap>
+    <bootstrap thing="xFastHeal">
+      <autotag group="Value" tag="5"/>
+      </bootstrap>
+    <bootstrap thing="xVamGas"></bootstrap>
+    <bootstrap thing="xVamClimb"></bootstrap>
+    <bootstrap thing="xChanRes">
+      <autotag group="Value" tag="6"/>
+      </bootstrap>
+    <bootstrap thing="xDamRdSil">
+      <autotag group="Value" tag="10"/>
+      </bootstrap>
+    <bootstrap thing="xDamRsElec">
+      <autotag group="Value" tag="10"/>
+      </bootstrap>
+    <bootstrap thing="typUndead"></bootstrap>
+    <bootstrap thing="wSlam">
+      <autotag group="wMain" tag="1d6_5"/>
+      </bootstrap>
+    <bootstrap thing="fAlertness"></bootstrap>
+    <bootstrap thing="fComRef"></bootstrap>
+    <bootstrap thing="fImpInit"></bootstrap>
+    <bootstrap thing="fImpGrapp"></bootstrap>
+    <bootstrap thing="rBlindSi">
+      <autotag group="Value" tag="30"/>
+      </bootstrap>
+    <bootstrap thing="xScent"></bootstrap>
+    <bootstrap thing="xClimb"></bootstrap>
+    <bootstrap thing="xDamRdGood">
+      <autotag group="Value" tag="10"/>
+      </bootstrap>
+    <bootstrap thing="xImmCold"></bootstrap>
+    <bootstrap thing="xDamRsAcid"></bootstrap>
+    <bootstrap thing="xDamRsSoni"></bootstrap>
+    <eval phase="PreLevel" priority="10000">
+      ~ We have bonuses to many skills
+      #racialbonus[skBluff] += 10
+      #racialbonus[skStealth] += 10
+      #racialbonus[skPercep] += 10
+      #racialbonus[skSenseMot] += 10
+      #racialbonus[skClimb] += 8</eval>
+    <exprreq message="Base creature 5 HD required."><![CDATA[herofield[tHitDice].value >= 5]]></exprreq>
+    <prereq message="Living creature required." iserror="no">
+      <validate><![CDATA[
+        ~once we've been selected, we're fine (since this makes the creature undead).
+        validif (@ispick <> 0)
+
+        ~we're valid if the hero is not unliving
+        validif (hero.tagis[NotLiving.?] = 0)]]></validate>
+      </prereq>
     </thing>
   </document>
