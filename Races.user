@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document signature="Hero Lab Data">
+  <thing id="rOrog" name="Orog" description="Orogs, also called elite orcs or greater orcs, are the much larger kin of normal orcs. They usually reach well over 6 feet tall but closely resemble normal orcs in all ways except build: orogs are much stronger and stockier. It is believed that orogs are the result of the union of a male orc and female ogre. In contrast to lesser orcs, orogs are highly disciplined and straightforward. Orogs within an orc community quickly rise to leadership positions within their clan, although in orc armies the orogs will segregate themselves into all-orog military units. Orog military units are highly organized, tactically superior, and far more dangerous than those of normal orcs. Such orog units form the vanguard of the army to which they belong. Orogs do not separate themselves into their own clans, despite their tendency to self-segregate while in an orc army. Orogs speak Orc, and those specimens that boast Intelligence scores of at least 10 also speak Common." compset="Race" summary="This creature looks like a gray-skinned stocky humanoid with coarse dark hair and dark eyes. Small upward curving tusks jut from its lower jaw.">
+    <fieldval field="rHitDice" value="3"/>
+    <fieldval field="rSTR" value="6"/>
+    <fieldval field="rCON" value="4"/>
+    <fieldval field="rWIS" value="-2"/>
+    <fieldval field="rCHA" value="-2"/>
+    <fieldval field="rFort" value="5"/>
+    <fieldval field="rRef" value="1"/>
+    <fieldval field="rCR" value="1"/>
+    <fieldval field="rSkillPlus" value="1"/>
+    <fieldval field="rEnviron" value="temperate hills and mountains"/>
+    <fieldval field="rOrgan" value="solitary, pair, gang (2-4), squad (11-20 plus 2 3rd-level sergeants and 1 leader of 3rd-6th level) or band (20-80 plus 100% noncombatants plus 1 3rd-level sergeant per 10 adults, 5 5th-level lieutenants, and 3 7th-level captains)"/>
+    <fieldval field="rTreasure" value="standard"/>
+    <fieldval field="rHPStart" value="17"/>
+    <tag group="SaveGood" tag="svFort"/>
+    <tag group="RaceType" tag="MonstClass"/>
+    <tag group="Alignment" tag="Lawful"/>
+    <tag group="Alignment" tag="Evil"/>
+    <tag group="RaceSize" tag="Medium0"/>
+    <tag group="IsRace" tag="rOgre"/>
+    <tag group="IsRace" tag="stOrc"/>
+    <tag group="IsRace" tag="stHalfOrc"/>
+    <tag group="IsRace" tag="rOrc"/>
+    <tag group="Language" tag="lDwarven"/>
+    <tag group="Language" tag="lGnoll"/>
+    <tag group="Language" tag="lGoblin"/>
+    <tag group="Language" tag="lTerran"/>
+    <tag group="HasType" tag="tpHumanoid"/>
+    <bootstrap thing="fArmHeavy"></bootstrap>
+    <bootstrap thing="fWepMart"></bootstrap>
+    <bootstrap thing="raOrcOgre"></bootstrap>
+    <bootstrap thing="raHOWeps"></bootstrap>
+    <bootstrap thing="fArmLight"></bootstrap>
+    <bootstrap thing="fArmMedium"></bootstrap>
+    <bootstrap thing="fSimple"></bootstrap>
+    <bootstrap thing="lCommon"></bootstrap>
+    <bootstrap thing="lOrc"></bootstrap>
+    <bootstrap thing="stHalfOrc"></bootstrap>
+    </thing>
+  <thing id="raOrcOgre" name="Orc/Ogre Blood" description="For all special abilities and effects, an orog is considered an orc or ogre. For example, orogs can use special ogre or orc weapons or magic items with racially specific ogre or orc powers as if they were ogres or orcs." compset="RaceSpec" summary="Orog counts as bot Ogre and Orc">
+    <tag group="Helper" tag="ShowSpec" name="Show Spec" abbrev="Show Spec"/>
+    <eval phase="First" priority="11000"><![CDATA[
+      ~if we've been replaced, get out now
+      doneif (tagis[Helper.SpcDisable] <> 0)
+
+      perform hero.assign[Race.rOgre]
+      perform hero.assign[IsRace.rOgre]
+      perform hero.assign[Race.rOrc]
+      perform hero.assign[IsRace.rOrc]]]></eval>
+    </thing>
+  <thing id="rIoph" name="Angel, Iophanite" description="Iophanites comprise a unique classification of messenger angel. Energetic, enthusiastic, impulsive, and outgoing, it constantly looks for ways to aid the forces of righteousness in the wars against fiends and villainy. As a being of pure righteous spirit in a burning physical form, an iophanite is often confused for an exotic form of harbinger or lantern archon. Its form is slightly mutable, and it can deform itself into an oval curved like a shield, or manifest simple tendrils to manipulate objects or lash out at opponents. When interacting with mortals, an iophanite usually manifests ripples of flames or pulses of light that thrum in time with its speaking. Most creatures have a difficult time telling iophanites apart, but these angels can always recognize each other.\n\nIophanites are talkative and have excellent memories, making them naturally inclined to carry news, battle orders, and other critical information. Their bodies are hot to the touch, but do not ignite combustibles unless the iophanite wishes it, allowing it to carry scrolls or other flammable goods without risk of destroying them. Of the lawful angels, they tend to be the most creative in terms of working around rules and the most forgiving of others&apos; failures. They are also inclined to serve as the guardians of mortals, being mindful of virtuous and self-sacrificing heroes who might be destined for greatness.\n\nIophanites measure exactly 5 feet in diameter and weigh 200 pounds." compset="Race" summary="This disc of flying metal is about the size of a wagon wheel and burns with yellow-white flame.">
+    <fieldval field="rHitDice" value="5"/>
+    <fieldval field="rHPStart" value="27"/>
+    <fieldval field="rSTR" value="2"/>
+    <fieldval field="rDEX" value="7"/>
+    <fieldval field="rCON" value="4"/>
+    <fieldval field="rWIS" value="1"/>
+    <fieldval field="rCHA" value="3"/>
+    <fieldval field="rCR" value="4"/>
+    <fieldval field="rSpCastLev" value="6"/>
+    <fieldval field="rEnviron" value="any (Heaven)"/>
+    <fieldval field="rOrgan" value="solitary, pair, or squad (3–8)"/>
+    <fieldval field="rTreasure" value="standard"/>
+    <tag group="SaveGood" tag="svFort"/>
+    <tag group="SaveGood" tag="svRef"/>
+    <tag group="HasType" tag="tpOutsider"/>
+    <tag group="Alignment" tag="Lawful"/>
+    <tag group="Alignment" tag="Good"/>
+    <tag group="NoTypeImm" tag="stAngel"/>
+    <tag group="NoTypeAbil" tag="stAngel"/>
+    <tag group="RaceType" tag="NPC"/>
+    <tag group="Helper" tag="NotHum"/>
+    <tag group="Hero" tag="NoDefComm"/>
+    <tag group="RaceSize" tag="Medium0"/>
+    <tag group="ClassSkill" tag="skKnowGeog"/>
+    <tag group="ClassSkill" tag="skIntim"/>
+    <tag group="ClassSkill" tag="skKnowRel"/>
+    <bootstrap thing="stAngel"></bootstrap>
+    <bootstrap thing="xFly">
+      <autotag group="Maneuver" tag="Perfect"/>
+      <autotag group="Value" tag="40"/>
+      </bootstrap>
+    <bootstrap thing="lCelestial"></bootstrap>
+    <bootstrap thing="rcPFTAb025"></bootstrap>
+    <bootstrap thing="xImmPetri"></bootstrap>
+    <bootstrap thing="rcUEReCold"></bootstrap>
+    <bootstrap thing="rcUEReAcid"></bootstrap>
+    <bootstrap thing="rcUEReElec"></bootstrap>
+    <bootstrap thing="spProtEvi1">
+      <autotag group="Helper" tag="SpellLike"/>
+      <autotag group="Usage" tag="Constant"/>
+      </bootstrap>
+    <bootstrap thing="lInfernal"></bootstrap>
+    <bootstrap thing="spKnowDir0">
+      <autotag group="Helper" tag="SpellLike"/>
+      <autotag group="Usage" tag="AtWill"/>
+      </bootstrap>
+    <bootstrap thing="spMageHan0">
+      <autotag group="Helper" tag="SpellLike"/>
+      <autotag group="Usage" tag="AtWill"/>
+      </bootstrap>
+    <bootstrap thing="spBurnHan1">
+      <autotag group="Helper" tag="SpellLike"/>
+      <autotag group="Usage" tag="Day"/>
+      <assignval field="trkMax" value="3"/>
+      </bootstrap>
+    <bootstrap thing="spScorRay2">
+      <autotag group="Helper" tag="SpellLike"/>
+      <autotag group="Usage" tag="Day"/>
+      <assignval field="trkMax" value="1"/>
+      </bootstrap>
+    <bootstrap thing="spTrueSpk4">
+      <autotag group="Helper" tag="SpellLike"/>
+      <autotag group="Usage" tag="Constant"/>
+      </bootstrap>
+    <bootstrap thing="raRadince"></bootstrap>
+    <bootstrap thing="stExtrapla"></bootstrap>
+    <bootstrap thing="stFire"></bootstrap>
+    <bootstrap thing="raAngPerc"></bootstrap>
+    <bootstrap thing="stGood"></bootstrap>
+    <bootstrap thing="stLawful"></bootstrap>
+    <bootstrap thing="xDamRdMag">
+      <autotag group="Value" tag="5"/>
+      </bootstrap>
+    <bootstrap thing="raShieldFo"></bootstrap>
+    <bootstrap thing="wOtherMel">
+      <autotag group="wMain" tag="1d8_6"/>
+      <autotag group="Value" tag="2"/>
+      </bootstrap>
+    <bootstrap thing="xSplRs"></bootstrap>
+    <bootstrap thing="raProtAura">
+      <autotag group="Value" tag="4"/>
+      </bootstrap>
+    </thing>
+  <thing id="raRadince" name="Radiance" description="An iophanite usually glows with a golden light equivalent to that of a candle. In battle, its glow increases, filling the area within 5 feet.\n\nAn iophanite can suppress or resume this glow as a free action. Additionally, as a standard action at will an iophanite can intensify its glow to reproduce the effects of the spell flare.\n\nA creature can resist this effect with a DC 14 Fortitude save, though evil creatures take a –4 penalty on their saves. The save DC is Charisma-based." compset="RaceSpec" summary="An iophanite usually glows with a golden light equivalent to that of a candle. In battle, its glow increases, filling the area within 5 feet.">
+    <fieldval field="abDC" value="1"/>
+    <tag group="abRange" tag="AdjSquare"/>
+    <tag group="abSave" tag="FortNeg"/>
+    <tag group="StandardDC" tag="aCHA"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    </thing>
+  <thing id="raAngPerc" name="+4 Perception" compset="RaceSpec">
+    <fieldval field="abValue" value="4"/>
+    <tag group="SpecType" tag="Skill" name="Skill Modifiers" abbrev="Skill Modifiers"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <eval phase="PostAttr" priority="10000"><![CDATA[
+      doneif (tagis[Helper.SpcDisable] <> 0)
+
+      #applybonus[BonSacred,hero.childfound[skPercep],field[abValue].value]]]></eval>
+    </thing>
+  <thing id="raShieldFo" name="Shield Form" description="Once per day, an iophanite can transform into a +1 spiked light steel shield sized for a Small or Medium creature. An iophanite cannot communicate or use any of its other abilities while in this form. Once it transforms, it cannot change back for 24 hours, though the spell break enchantment can end the transformation early. An iophanite regains its full hit points when it shifts back into its normal form. If the shield is destroyed, the iophanite is killed." compset="RaceSpec" summary=" Transform into a +1 spiked light steel shield sized for a Small or Medium creature.">
+    <tag group="Helper" tag="ShowSpec"/>
+    </thing>
+  <thing id="anWorg" name="Worg" compset="AnimalComp">
+    <fieldval field="rNumHands" value="0"/>
+    <arrayval field="anCHA" index="0" value="-4"/>
+    <arrayval field="anCON" index="0" value="5"/>
+    <arrayval field="anCON" index="6" value="9"/>
+    <arrayval field="anDEX" index="0" value="5"/>
+    <arrayval field="anDEX" index="6" value="3"/>
+    <arrayval field="anNatural" index="0" value="2"/>
+    <arrayval field="anNatural" index="6" value="4"/>
+    <arrayval field="anSTR" index="0" value="3"/>
+    <arrayval field="anSTR" index="6" value="11"/>
+    <arrayval field="anSizeMod" index="6" value="1"/>
+    <arrayval field="anSpeed" index="0" value="50"/>
+    <arrayval field="anWIS" index="0" value="2"/>
+    <tag group="RaceSize" tag="Medium0" name="Medium" abbrev="Medium"/>
+    <tag group="SlotSet" tag="selMISQuaC" name="Quadruped (claws/paws)" abbrev="Quadruped (claws/paws)"/>
+    <tag group="AddCompLis" tag="cHelpMmR" name="cHelpMmR" abbrev="cHelpMmR"/>
+    <tag group="Alignment" tag="NeutralGE" name="Neutral" abbrev="N"/>
+    <tag group="Alignment" tag="NeutralLC" name="Neutral" abbrev="N"/>
+    <tag group="CompList" tag="arAlcConRd" name="arAlcConRd" abbrev="arAlcConRd"/>
+    <tag group="CompList" tag="arCavBeRid" name="Beast Rider" abbrev="Beast Rider"/>
+    <tag group="CompList" tag="arDrdWolf" name="Wolf Shaman" abbrev="Wolf Shaman"/>
+    <tag group="CompList" tag="cHelpCav" name="Cavaliers" abbrev="Cavaliers"/>
+    <tag group="CompList" tag="cHelpPal" name="Paladins" abbrev="Paladins"/>
+    <tag group="CompList" tag="cHelpRgr" name="Rangers" abbrev="Rangers"/>
+    <tag group="CompList" tag="cOraPriCom" name="Primal Companion" abbrev="Primal Companion"/>
+    <tag group="HasType" tag="tpMagBeast"/>
+    <tag group="Helper" tag="NotHum" name="NotHum" abbrev="NotHum"/>
+    <tag group="Helper" tag="Quadruped" name="Quadruped" abbrev="Quadruped"/>
+    <tag group="Race" tag="rWorg"/>
+    <tag group="Race" tag="anWorg"/>
+    <bootstrap thing="xDogTrack"></bootstrap>
+    <bootstrap thing="wBite">
+      <autotag group="wMain" tag="1d6"/>
+      </bootstrap>
+    <bootstrap thing="xScent"></bootstrap>
+    <bootstrap thing="raTrip"></bootstrap>
+    <bootstrap thing="raLowLight"></bootstrap>
+    <bootstrap thing="raDarkVis"></bootstrap>
+    <bootstrap thing="fRun"></bootstrap>
+    <bootstrap thing="fSkillFoc">
+      <autotag group="Target" tag="skPercep"/>
+      </bootstrap>
+    </thing>
+  </document>

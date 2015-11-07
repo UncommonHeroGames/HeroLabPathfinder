@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document signature="Hero Lab Data">
+  <thing id="cSplScars" name="Spell-Scars" description="The magus can use special scar-based tattoos called spell-scars on his skin to cast or prepare spells, much like scrolls. He can cast a spell from a spell-scar exactly like casting from a scroll; the ink and scars vanish when the spell is cast. The magus can also prepare spells from his spell-scars without expending them, similar to a wizard using the Spell Mastery feat.\n\nThe magus does not need to be able to see his spell-scar to use it. A magus has room on his skin for 18 total spell levels of spell-scars, which he can create using the rules for scribing scrolls (although they do not require the Scribe Scroll feat)." compset="CustomSpec" summary="Scribe scrolls on body instead of paper" uniqueness="unique">
+    <tag group="SpecSource" tag="cHelpMag"/>
+    <tag group="abCategory" tag="MagArcana"/>
+    <tag group="AbilType" tag="Extra"/>
+    </thing>
+  <thing id="skProfPilo" name="Profession (Pilot)" description="You are skilled at a specific job. Like Craft, Knowledge, and Perform, Profession is actually a number of separate skills. You could have several Profession skills, each with its own ranks. While a Craft skill represents ability in creating an item, a Profession skill represents an aptitude in a vocation requiring a broader range of less specific knowledge. The most common Profession skills are architect, baker, barrister, brewer, butcher, clerk, cook, courtesan, driver, engineer, farmer, fisherman, gambler, gardener, herbalist, innkeeper, librarian, merchant, midwife, miller, miner, porter, sailor, scribe, shepherd, stable master, soldier, tanner, trapper, and woodcutter.\n\n{b}Check{/b}: You can earn half your Profession check result in gold pieces per week of dedicated work. You know how to use the tools of your trade, how to perform the profession&apos;s daily tasks, how to supervise helpers, and how to handle common problems. You can also answer questions about your Profession. Basic questions are DC 10, while more complex questions are DC 15 or higher.\n\n{b}Action{/b}: Not applicable. A single check generally represents a week of work.{br}{br}Continued - Core Rulebook, pg. 103" compset="Skill" uniqueness="unique">
+    <tag group="Helper" tag="ExtraSkill" name="ExtraSkill" abbrev="ExtraSkill"/>
+    <tag group="Helper" tag="SkCatProf" name="Profession Skill" abbrev="Profession Skill"/>
+    <tag group="Helper" tag="TrainOnly" name="TrainOnly" abbrev="TrainOnly"/>
+    <link linkage="skillattr" thing="aWIS"/>
+    </thing>
+  <thing id="ioSolGen" name="Solar Generator" description="Yield 50; Fort +5; Hardness 2; hp 100; Explosion none; Perception Penalty +0\n\nA solar generator consists of a fairly small converter attached to a set of huge reflective panels. It produces full yield while receiving direct sunlight. Its yield halves during overcast conditions. At night or when densely overcast, its yield drops to 0. A solar generator runs silently. A solar generator cannot be forced to exceed its yield." compset="Wondrous" summary="Small solar converter">
+    <fieldval field="gWeight" value="80"/>
+    <fieldval field="trkMax" value="50"/>
+    <tag group="Helper" tag="ArtiTechno"/>
+    <tag group="Helper" tag="ShowSpec"/>
+    <tag group="thing" tag="holder"/>
+    <tag group="gType" tag="Wonder"/>
+    <tag group="Usage" tag="Hour"/>
+    <tag group="Helper" tag="AlwaysAvl"/>
+    <tag group="User" tag="Tracker"/>
+    </thing>
+  <thing id="arDrlSrgt" name="Drill Sergeant" description="Drill sergeants excel at training other combatants in fighting techniques.\n\nTactician (Ex)\n\nAt 2nd level, a drill sergeant gains the cavalier&apos;s tactician class feature, treating his fighter level as his cavalier level for the purposes of this ability.\n\nThis ability replaces bravery.\n\nWeapon Training (Ex)\n\nAt 5th level, a drill sergeant gains weapon training with one group of weapons. He doesn&apos;t gain weapon training with other groups at later levels, though his weapon training bonus improves by 1 for every 4 levels after 5th level.\n\nThis ability modifies weapon training 1.\n\nGreater Tactician (Ex)\n\nAt 9th level, the drill sergeant gains the cavalier&apos;s greater tactician class feature.\n\nThis ability replaces weapon training 2.\n\nWeapon Trainer (Ex)\n\nAt 13th level, when a drill sergeant wields a weapon he has weapon training in, all allies within 30 feet who can see and hear the drill sergeant gain half his weapon training bonus when they wield any weapon from the same weapon group.\n\nThis bonus doesn&apos;t stack with any weapon training bonus an ally already possesses.\n\nThis ability replaces weapon training 3.\n\nMaster Tactician (Ex)\n\nAt 17th level, the drill sergeant gains the cavalier&apos;s master tactician class feature.\n\nThis ability replaces weapon training 4." compset="ClassVary" uniqueness="unique">
+    <arrayval field="cvBonFtMod" index="2" value="1"/>
+    <arrayval field="cvBonFtMod" index="9" value="1"/>
+    <arrayval field="cvBonFtMod" index="17" value="1"/>
+    <tag group="fCategory" tag="Teamwork"/>
+    <tag group="AbReplace" tag="cFtrBrave"/>
+    <bootstrap thing="cClrDSMasT">
+      <autotag group="ClSpecWhen" tag="17"/>
+      </bootstrap>
+    <bootstrap thing="cCavGrTact">
+      <autotag group="ClSpecWhen" tag="9"/>
+      </bootstrap>
+    <bootstrap thing="cCavTactic">
+      <autotag group="ClSpecWhen" tag="2"/>
+      </bootstrap>
+    <bootstrap thing="cWpnTran">
+      <autotag group="ClSpecWhen" tag="13"/>
+      </bootstrap>
+    <link linkage="varies" thing="cHelpFtr"/>
+    </thing>
+  <thing id="cWpnTran" name="Weapon Trainer" description="At 13th level, when a drill sergeant wields a weapon he has weapon training in, all allies within 30 feet who can see and hear the drill sergeant gain half his weapon training bonus when they wield any weapon from the same weapon group.\n\nThis bonus doesn&apos;t stack with any weapon training bonus an ally already possesses.\n\nThis ability replaces weapon training 3." compset="ClSpecial"></thing>
+  </document>
